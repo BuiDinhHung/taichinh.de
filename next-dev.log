@@ -1,0 +1,25 @@
+
+> ai-website-clone-template@0.3.1 dev
+> next dev
+
+▲ Next.js 16.2.1 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.1.179:3000
+- Environments: .env.local
+✓ Ready in 404ms
+Creating turbopack project {
+  dir: 'C:\\Users\\Admin\\Downloads\\taichinh-source\\taichinh',
+  testMode: true
+}
+
+ POST /api/setup 200 in 2.6s (next.js: 638ms, application-code: 1965ms)
+ POST /api/auth/login 200 in 1438ms (next.js: 124ms, application-code: 1313ms)
+ GET /api/auth/me 200 in 116ms (next.js: 109ms, application-code: 8ms)
+ GET /api/articles 500 in 530ms (next.js: 132ms, application-code: 398ms)
+ POST /api/auth/login 200 in 1307ms (next.js: 5ms, application-code: 1302ms)
+ GET /api/auth/me 200 in 17ms (next.js: 3ms, application-code: 14ms)
+ GET /api/articles 200 in 349ms (next.js: 43ms, application-code: 306ms)
+ POST /api/auth/login 200 in 1321ms (next.js: 4ms, application-code: 1317ms)
+ POST /api/articles 200 in 353ms (next.js: 5ms, application-code: 348ms)
+ GET /bai-kiem-tra-database 200 in 2.3s (next.js: 792ms, generate-params: 674ms, application-code: 1465ms)
+ DELETE /api/articles/jxvV7mvDqwOw6mtkLUYR 200 in 1338ms (next.js: 1015ms, application-code: 322ms)
