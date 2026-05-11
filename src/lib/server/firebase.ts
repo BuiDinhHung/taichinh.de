@@ -41,7 +41,7 @@ function loadServiceAccount(): ServiceAccount {
       ...serviceAccount,
       private_key: normalizePrivateKey(serviceAccount.private_key),
     };
-  } catch (error) {
+  } catch {
     throw new Error(
       "Invalid Firebase service account JSON. Verify FIREBASE_SERVICE_ACCOUNT_JSON, FIREBASE_SERVICE_ACCOUNT_BASE64, or FIREBASE_SERVICE_ACCOUNT_PATH.",
     );

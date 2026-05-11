@@ -23,9 +23,18 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!article) {
     const dbArticle = await getDbArticleBySlug(slug).catch(() => null);
     if (!dbArticle) return {};
+    const image = dbArticle.image?.trim();
+    const description = dbArticle.content.replace(/[#>*\-]/g, "").trim().slice(0, 160);
     return {
       title: `${dbArticle.title} – taichinh.de`,
-      description: dbArticle.content.replace(/[#>*\-]/g, "").trim().slice(0, 160),
+      description,
+      openGraph: image
+        ? {
+            title: dbArticle.title,
+            description,
+            images: [{ url: image }],
+          }
+        : undefined,
     };
   }
   return {
@@ -51,6 +60,7 @@ export default async function ArticlePage({
     if (!dbArticle) notFound();
 
     const body = parseMarkdown(dbArticle.content);
+    const coverImage = dbArticle.image?.trim();
     const date = new Date(dbArticle.updatedAt).toLocaleDateString("vi-VN", {
       year: "numeric",
       month: "long",
@@ -80,6 +90,15 @@ export default async function ArticlePage({
                 </h1>
                 <p className="mt-4 text-sm text-muted-foreground">{date}</p>
               </header>
+
+              {coverImage ? (
+                <div
+                  className="mt-8 aspect-[16/9] w-full overflow-hidden rounded-2xl bg-cover bg-center bg-muted"
+                  style={{ backgroundImage: `url("${coverImage.replace(/"/g, "%22")}")` }}
+                  role="img"
+                  aria-label={dbArticle.title}
+                />
+              ) : null}
 
               <div className="mt-10 max-w-3xl">
                 {body.length > 0 ? (

@@ -14,6 +14,7 @@ export async function POST(request: Request) {
     const article = await saveDbArticle({
       id: typeof body.id === "string" ? body.id : undefined,
       title: String(body.title ?? ""),
+      image: String(body.image ?? ""),
       content: String(body.content ?? ""),
       category: String(body.category ?? ""),
     });

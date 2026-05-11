@@ -43,7 +43,7 @@ export function articleAsFeedItem(
 const FALLBACK_ARTICLE_IMAGE = "/images/article-03-tu-van-chuyen-nghiep.jpeg";
 
 export function dbArticleAsFeedItem(article: DbArticle): FeedItem {
-  const image = extractFirstImage(article.content) ?? FALLBACK_ARTICLE_IMAGE;
+  const image = article.image?.trim() || extractFirstImage(article.content) || FALLBACK_ARTICLE_IMAGE;
   const excerpt = extractExcerpt(article.content);
   const date = new Date(article.updatedAt).toLocaleDateString("en-US", {
     year: "numeric",

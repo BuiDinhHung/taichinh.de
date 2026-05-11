@@ -2,6 +2,7 @@ export type DbArticle = {
   id: string;
   slug: string;
   title: string;
+  image?: string;
   content: string;
   category: string;
   status: "published";
@@ -12,6 +13,7 @@ export type DbArticle = {
 export type DbArticleInput = {
   id?: string;
   title: string;
+  image?: string;
   content: string;
   category: string;
 };

@@ -57,6 +57,7 @@ export async function saveDbArticle(input: DbArticleInput): Promise<DbArticle> {
     id,
     slug,
     title: input.title.trim() || "Bài viết không tiêu đề",
+    image: input.image?.trim() || undefined,
     content: input.content,
     category: input.category,
     status: "published",
@@ -67,6 +68,7 @@ export async function saveDbArticle(input: DbArticleInput): Promise<DbArticle> {
   const data = {
     slug: article.slug,
     title: article.title,
+    image: article.image ?? "",
     content: article.content,
     category: article.category,
     status: article.status,

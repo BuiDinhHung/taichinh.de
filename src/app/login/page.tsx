@@ -5,8 +5,8 @@ import { Footer } from "@/components/Footer";
 import { LoginForm } from "@/components/LoginForm";
 
 export const metadata: Metadata = {
-  title: "Đăng nhập – taichinh.de",
-  description: "Đăng nhập quản trị để viết và lưu bài viết vào database.",
+  title: "Đăng nhập - taichinh.de",
+  description: "Đăng nhập quản trị để viết và lưu bài viết vào bộ nhớ.",
 };
 
 export default function LoginPage() {

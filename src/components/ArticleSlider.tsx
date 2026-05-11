@@ -71,14 +71,22 @@ export function ArticleSlider() {
               className="group flex shrink-0 basis-[85%] flex-col overflow-hidden rounded-sm bg-white shadow-[0_2px_8px_rgba(0,0,0,0.06)] sm:basis-[60%] md:basis-[42%] lg:basis-[30%] dark:bg-card"
             >
               <div className="relative aspect-[16/10] overflow-hidden">
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  sizes="(min-width: 1024px) 30vw, (min-width: 640px) 60vw, 85vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
-                  unoptimized={item.unoptimizedImage}
-                />
+                {item.unoptimizedImage ? (
+                  <div
+                    className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-[1.04]"
+                    style={{ backgroundImage: `url("${item.image.replace(/"/g, "%22")}")` }}
+                    role="img"
+                    aria-label={item.title}
+                  />
+                ) : (
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    sizes="(min-width: 1024px) 30vw, (min-width: 640px) 60vw, 85vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                  />
+                )}
               </div>
               <div className="flex flex-1 flex-col gap-3 p-6">
                 <span className="self-start rounded-sm bg-brand-gold-tint-2 px-2.5 py-1 text-xs font-bold uppercase tracking-wider text-brand-gold-deepest">

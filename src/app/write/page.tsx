@@ -7,8 +7,8 @@ import { BlockEditor } from "@/components/BlockEditor";
 import { getCurrentUsername } from "@/lib/server/auth";
 
 export const metadata: Metadata = {
-  title: "Viết bài – taichinh.de",
-  description: "Soạn và lưu bài viết trực tiếp vào Firebase Firestore.",
+  title: "Viết bài - taichinh.de",
+  description: "Soạn và lưu bài viết trực tiếp vào bộ nhớ.",
 };
 
 export default async function WritePage() {
@@ -29,7 +29,7 @@ export default async function WritePage() {
                 Soạn bài viết của bạn
               </h1>
               <p className="mt-4 text-base leading-relaxed text-text-default dark:text-foreground/85 sm:text-lg">
-                Bài viết sẽ được lưu vào Firebase Firestore và hiển thị công khai trên website sau khi lưu.
+                Bài viết sẽ được lưu và hiển thị công khai trên website sau khi lưu.
               </p>
             </header>
           </div>

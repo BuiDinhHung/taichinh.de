@@ -28,7 +28,7 @@ export function DraftView({ id }: { id: string }) {
 
   const onDelete = async () => {
     if (!article) return;
-    if (!window.confirm("Xóa bài viết này khỏi database?")) return;
+    if (!window.confirm("Xóa bài viết này khỏi bộ nhớ?")) return;
     await deleteDbArticleClient(article.id);
     router.push("/drafts");
   };
@@ -41,7 +41,7 @@ export function DraftView({ id }: { id: string }) {
     return (
       <div className="rounded-xl border border-dashed border-border-default p-12 text-center">
         <p className="text-base text-text-muted">
-          Không tìm thấy bài viết này trong database.
+          Không tìm thấy bài viết này trong bộ nhớ.
         </p>
         {message ? <p className="mt-1 text-xs text-brand-red">{message}</p> : null}
         <Link
@@ -53,6 +53,8 @@ export function DraftView({ id }: { id: string }) {
       </div>
     );
   }
+
+  const coverImage = article.image?.trim();
 
   return (
     <article className="space-y-8">
@@ -79,6 +81,15 @@ export function DraftView({ id }: { id: string }) {
           })}
         </p>
       </header>
+
+      {coverImage ? (
+        <div
+          className="aspect-[16/9] overflow-hidden rounded-2xl bg-cover bg-center bg-muted"
+          style={{ backgroundImage: `url("${coverImage.replace(/"/g, "%22")}")` }}
+          role="img"
+          aria-label={article.title || "Ảnh bài viết"}
+        />
+      ) : null}
 
       <div className="rounded-2xl border border-border-default bg-white p-6 sm:p-10 dark:bg-card">
         <ArticleBody blocks={parseMarkdown(article.content)} unoptimizedImages />

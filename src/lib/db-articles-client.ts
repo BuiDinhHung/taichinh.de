@@ -43,10 +43,13 @@ export async function deleteDbArticleClient(id: string): Promise<void> {
   notifyArticlesChanged();
 }
 
-export function exportArticleAsMarkdown(article: Pick<DbArticle, "title" | "content" | "updatedAt">): string {
+export function exportArticleAsMarkdown(
+  article: Pick<DbArticle, "title" | "image" | "content" | "updatedAt">,
+): string {
   const front = [
     "---",
     `title: ${JSON.stringify(article.title || "Untitled")}`,
+    ...(article.image ? [`image: ${JSON.stringify(article.image)}`] : []),
     `updatedAt: ${new Date(article.updatedAt).toISOString()}`,
     "---",
     "",
@@ -55,7 +58,9 @@ export function exportArticleAsMarkdown(article: Pick<DbArticle, "title" | "cont
   return front + body;
 }
 
-export function downloadArticleAsFile(article: Pick<DbArticle, "title" | "content" | "updatedAt">): void {
+export function downloadArticleAsFile(
+  article: Pick<DbArticle, "title" | "image" | "content" | "updatedAt">,
+): void {
   if (typeof window === "undefined") return;
   const md = exportArticleAsMarkdown(article);
   const blob = new Blob([md], { type: "text/markdown;charset=utf-8" });

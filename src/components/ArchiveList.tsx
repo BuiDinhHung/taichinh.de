@@ -56,14 +56,22 @@ export function ArchiveList() {
                     className="group flex items-center gap-4 py-5 transition-colors hover:bg-brand-gold-tint/40 dark:hover:bg-accent/50"
                   >
                     <div className="relative h-14 w-20 sm:h-16 sm:w-24 shrink-0 overflow-hidden rounded-md bg-muted">
-                      <Image
-                        src={item.image}
-                        alt={item.title}
-                        fill
-                        sizes="96px"
-                        className="object-cover"
-                        unoptimized={item.unoptimizedImage}
-                      />
+                      {item.unoptimizedImage ? (
+                        <div
+                          className="absolute inset-0 bg-cover bg-center"
+                          style={{ backgroundImage: `url("${item.image.replace(/"/g, "%22")}")` }}
+                          role="img"
+                          aria-label={item.title}
+                        />
+                      ) : (
+                        <Image
+                          src={item.image}
+                          alt={item.title}
+                          fill
+                          sizes="96px"
+                          className="object-cover"
+                        />
+                      )}
                     </div>
                     <div className="flex-1 min-w-0">
                       <p className="text-base sm:text-lg font-bold leading-snug text-text-strong group-hover:text-brand-gold-darker transition-colors dark:text-foreground dark:group-hover:text-primary">

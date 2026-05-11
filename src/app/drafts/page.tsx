@@ -7,8 +7,8 @@ import { DraftList } from "@/components/DraftList";
 import { getCurrentUsername } from "@/lib/server/auth";
 
 export const metadata: Metadata = {
-  title: "Quản lý bài viết – taichinh.de",
-  description: "Quản lý các bài viết đã lưu trong Firebase Firestore.",
+  title: "Quản lý bài viết - taichinh.de",
+  description: "Quản lý các bài viết đã lưu trong bộ nhớ.",
 };
 
 export default async function DraftsPage() {
@@ -24,13 +24,13 @@ export default async function DraftsPage() {
             <div className="flex items-end justify-between gap-4">
               <header className="max-w-2xl">
                 <p className="text-sm font-bold uppercase tracking-wider text-brand-gold">
-                  Database
+                  Bộ nhớ
                 </p>
                 <h1 className="mt-2 text-3xl font-bold tracking-tight text-text-strong dark:text-foreground sm:text-4xl lg:text-5xl">
                   Bài viết của bạn
                 </h1>
                 <p className="mt-3 text-sm text-text-muted sm:text-base">
-                  Danh sách bài viết đang lưu trong Firebase Firestore.
+                  Danh sách bài viết đang lưu trong bộ nhớ.
                 </p>
               </header>
               <Link
