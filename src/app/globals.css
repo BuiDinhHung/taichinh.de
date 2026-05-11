@@ -199,6 +199,15 @@
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
   }
+  html[data-embedded="true"],
+  html[data-embedded="true"] body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  html[data-embedded="true"]::-webkit-scrollbar,
+  html[data-embedded="true"] body::-webkit-scrollbar {
+    display: none;
+  }
   h1, h2, h3, h4, h5, h6 {
     color: var(--text-strong);
     font-weight: 700;

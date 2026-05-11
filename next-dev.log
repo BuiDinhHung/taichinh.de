@@ -88,3 +88,26 @@ Creating turbopack project {
  GET / 200 in 157ms (next.js: 51ms, application-code: 106ms)
  GET /drafts 200 in 402ms (next.js: 4ms, application-code: 398ms)
  GET /api/articles 200 in 648ms (next.js: 72ms, application-code: 576ms)
+✓ Compiled in 294ms
+ GET /drafts 200 in 795ms (next.js: 382ms, application-code: 413ms)
+ GET /drafts 200 in 281ms (next.js: 164ms, application-code: 117ms)
+ GET / 200 in 808ms (next.js: 202ms, application-code: 606ms)
+ GET / 200 in 287ms (next.js: 101ms, application-code: 186ms)
+ GET /api/articles 200 in 1856ms (next.js: 105ms, application-code: 1751ms)
+✓ Compiled in 127ms
+ GET /drafts 200 in 415ms (next.js: 204ms, application-code: 211ms)
+ GET /drafts 200 in 134ms (next.js: 66ms, application-code: 68ms)
+ GET / 200 in 421ms (next.js: 96ms, application-code: 324ms)
+ GET / 200 in 156ms (next.js: 22ms, application-code: 135ms)
+✓ Compiled in 96ms
+ GET /drafts 200 in 358ms (next.js: 180ms, application-code: 177ms)
+ GET /drafts 200 in 114ms (next.js: 56ms, application-code: 57ms)
+ GET / 200 in 363ms (next.js: 89ms, application-code: 274ms)
+ GET / 200 in 133ms (next.js: 20ms, application-code: 114ms)
+ GET /drafts 200 in 255ms (next.js: 169ms, application-code: 86ms)
+ GET / 200 in 261ms (next.js: 94ms, application-code: 167ms)
+✓ Compiled in 60ms
+ GET /api/articles 200 in 414ms (next.js: 49ms, application-code: 365ms)
+ GET / 200 in 236ms (next.js: 57ms, application-code: 179ms)
+✓ Compiled in 342ms
+✓ Compiled in 237ms

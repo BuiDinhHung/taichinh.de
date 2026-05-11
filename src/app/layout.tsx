@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { EmbeddedScrollbarMode } from "@/components/EmbeddedScrollbarMode";
 import "./globals.css";
 
 const dvagType = localFont({
@@ -27,6 +28,7 @@ export default function RootLayout({
   return (
     <html lang="vi" className={`${dvagType.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col bg-background text-foreground font-sans">
+        <EmbeddedScrollbarMode />
         {children}
       </body>
     </html>
