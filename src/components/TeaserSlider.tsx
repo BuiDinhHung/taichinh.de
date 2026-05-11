@@ -5,7 +5,7 @@ import { ArrowRightIcon } from "@/components/icons";
 
 export function TeaserSlider() {
   return (
-    <section className="bg-surface py-16 lg:py-24">
+    <section className="bg-surface py-10 sm:py-14 lg:py-24">
       <div className="dvag-container">
         <div
           className="dvag-snap-x flex gap-4 overflow-x-auto pb-4 -mx-5 px-5
@@ -15,7 +15,7 @@ export function TeaserSlider() {
           {teaserCards.map((card) => (
             <article
               key={card.headline}
-              className="group relative flex shrink-0 basis-[78%] flex-col overflow-hidden rounded-sm bg-white shadow-[0_2px_8px_rgba(0,0,0,0.06)] md:basis-auto"
+              className="group relative flex shrink-0 basis-[82%] flex-col overflow-hidden rounded-sm bg-white shadow-[0_2px_8px_rgba(0,0,0,0.06)] min-[420px]:basis-[74%] sm:basis-[56%] md:basis-auto"
             >
               <div className="relative aspect-[3/4] w-full overflow-hidden">
                 <Image
@@ -30,7 +30,7 @@ export function TeaserSlider() {
                     <p className="text-xs font-bold uppercase tracking-wider text-white/95">
                       {card.label}
                     </p>
-                    <h3 className="mt-2 text-xl font-bold leading-snug !text-white lg:text-[22px]">
+                    <h3 className="mt-2 text-lg font-bold leading-snug !text-white sm:text-xl lg:text-[22px]">
                       {card.headline}
                     </h3>
                   </div>
