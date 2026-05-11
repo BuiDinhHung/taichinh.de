@@ -111,3 +111,4 @@ Creating turbopack project {
  GET / 200 in 236ms (next.js: 57ms, application-code: 179ms)
 ✓ Compiled in 342ms
 ✓ Compiled in 237ms
+ GET / 200 in 803ms (next.js: 266ms, application-code: 537ms)

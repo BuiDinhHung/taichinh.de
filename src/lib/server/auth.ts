@@ -7,6 +7,8 @@ import { getAdminDb } from "@/lib/server/firebase";
 
 export const SESSION_COOKIE = "taichinh_session";
 const SESSION_TTL_MS = 1000 * 60 * 60 * 24 * 7;
+const DEFAULT_ADMIN_USERNAME = "admin";
+const DEFAULT_ADMIN_PASSWORD = "password";
 
 function sessionSecret(): string {
   const secret = process.env.AUTH_SESSION_SECRET;
@@ -76,19 +78,37 @@ export async function requireAdmin(): Promise<string> {
 
 export async function ensureDefaultAdminUser(): Promise<{ created: boolean }> {
   const db = getAdminDb();
-  const ref = db.collection("users").doc("admin");
+  const ref = db.collection("users").doc(DEFAULT_ADMIN_USERNAME);
   const snap = await ref.get();
   if (snap.exists) return { created: false };
 
   const now = Date.now();
   const user: DbUser = {
-    username: "admin",
-    passwordHash: hashPassword("password"),
+    username: DEFAULT_ADMIN_USERNAME,
+    passwordHash: hashPassword(DEFAULT_ADMIN_PASSWORD),
     createdAt: now,
     updatedAt: now,
   };
   await ref.set(user);
   return { created: true };
+}
+
+export async function repairDefaultAdminPassword(username: string, password: string): Promise<DbUser | null> {
+  if (username !== DEFAULT_ADMIN_USERNAME || password !== DEFAULT_ADMIN_PASSWORD) return null;
+
+  const db = getAdminDb();
+  const ref = db.collection("users").doc(DEFAULT_ADMIN_USERNAME);
+  const snap = await ref.get();
+  const now = Date.now();
+  const nextUser: DbUser = {
+    username: DEFAULT_ADMIN_USERNAME,
+    passwordHash: hashPassword(DEFAULT_ADMIN_PASSWORD),
+    createdAt: snap.exists ? ((snap.data() as Partial<DbUser>).createdAt ?? now) : now,
+    updatedAt: now,
+  };
+
+  await ref.set(nextUser, { merge: true });
+  return nextUser;
 }
 
 export async function findUser(username: string): Promise<DbUser | null> {

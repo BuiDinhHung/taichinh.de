@@ -1,9 +1,9 @@
 import { NextResponse } from "next/server";
-import { cookies } from "next/headers";
 import {
   SESSION_COOKIE,
   ensureDefaultAdminUser,
   findUser,
+  repairDefaultAdminPassword,
   signSession,
   verifyPassword,
 } from "@/lib/server/auth";
@@ -17,17 +17,21 @@ export async function POST(request: Request) {
   const username = body?.username?.trim() ?? "";
   const password = body?.password ?? "";
   if (!username || !password) {
-    return NextResponse.json({ ok: false, message: "Thiếu username hoặc password." }, { status: 400 });
+    return NextResponse.json({ ok: false, message: "Thieu username hoac password." }, { status: 400 });
   }
 
   await ensureDefaultAdminUser();
-  const user = await findUser(username);
+  let user = await findUser(username);
   if (!user || !verifyPassword(password, user.passwordHash)) {
-    return NextResponse.json({ ok: false, message: "Sai tài khoản hoặc mật khẩu." }, { status: 401 });
+    user = await repairDefaultAdminPassword(username, password);
   }
 
-  const cookieStore = await cookies();
-  cookieStore.set(SESSION_COOKIE, signSession(user.username), {
+  if (!user || !verifyPassword(password, user.passwordHash)) {
+    return NextResponse.json({ ok: false, message: "Sai tai khoan hoac mat khau." }, { status: 401 });
+  }
+
+  const response = NextResponse.json({ ok: true, username: user.username });
+  response.cookies.set(SESSION_COOKIE, signSession(user.username), {
     httpOnly: true,
     sameSite: "lax",
     secure: process.env.NODE_ENV === "production",
@@ -35,5 +39,5 @@ export async function POST(request: Request) {
     maxAge: 60 * 60 * 24 * 7,
   });
 
-  return NextResponse.json({ ok: true, username: user.username });
+  return response;
 }
