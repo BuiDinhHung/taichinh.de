@@ -9,6 +9,8 @@ export const metadata: Metadata = {
   description: "Soạn và lưu bài viết trực tiếp vào bộ nhớ.",
 };
 
+export const dynamic = "force-dynamic";
+
 export default function WritePage() {
   return (
     <>
