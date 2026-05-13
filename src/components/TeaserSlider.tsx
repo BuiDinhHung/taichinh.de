@@ -26,8 +26,8 @@ export function TeaserSlider() {
                   className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
                 />
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/55 via-black/20 to-transparent p-4">
-                  <div className="rounded-md bg-brand-blue/88 px-4 py-3 text-white shadow-[0_12px_32px_rgba(0,0,0,0.28)] backdrop-blur-[2px]">
-                    <p className="text-xs font-extrabold uppercase tracking-[0.12em] text-brand-gold-tint-2">
+                  <div className="rounded-md bg-brand-gold/88 px-4 py-3 text-white shadow-[0_12px_32px_rgba(0,0,0,0.28)] backdrop-blur-[2px]">
+                    <p className="text-xs font-extrabold uppercase tracking-[0.12em] text-white/95">
                       {card.label}
                     </p>
                     <h3 className="mt-2 text-lg font-extrabold leading-snug !text-white sm:text-xl lg:text-[22px]">

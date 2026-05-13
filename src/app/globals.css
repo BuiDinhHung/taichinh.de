@@ -4,15 +4,31 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@font-face {
+  font-family: "DVAG Type";
+  src: url("/fonts/DVAGType_W_Rg.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DVAG Type";
+  src: url("/fonts/DVAGType_W_Bd.woff2") format("woff2");
+  font-weight: 700 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* ------------------------------------------------------------------
    DVAG visual identity applied to taichinh.de content
    ------------------------------------------------------------------ */
 :root {
   /* Brand gold (DVAG signature) */
-  --brand-gold: #b9971f;
-  --brand-gold-dark: #967814;
-  --brand-gold-darker: #735b0d;
-  --brand-gold-deepest: #4d3d08;
+  --brand-gold: #c8aa22;
+  --brand-gold-dark: #a0881b;
+  --brand-gold-darker: #786614;
+  --brand-gold-deepest: #50440d;
   --brand-gold-tint: #fbf7e6;
   --brand-gold-tint-2: #f0e4b8;
 
@@ -21,12 +37,12 @@
   --brand-red-tint: #f5e9eb;
 
   /* Brand blue (info) */
-  --brand-blue-deep: #073642;
-  --brand-blue: #0b5264;
-  --brand-blue-mid: #267184;
-  --brand-blue-light: #4e8fa0;
-  --brand-blue-tint: #e8f1f3;
-  --brand-blue-tint-2: #d2e3e8;
+  --brand-blue-deep: #50440d;
+  --brand-blue: #786614;
+  --brand-blue-mid: #a0881b;
+  --brand-blue-light: #c8aa22;
+  --brand-blue-tint: #f9f6e9;
+  --brand-blue-tint-2: #f4eed2;
 
   /* Greys / surfaces */
   --text-strong: #20272d;
@@ -122,8 +138,8 @@
 }
 
 @theme inline {
-  --font-sans: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --font-heading: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-sans: "DVAG Type", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-heading: "DVAG Type", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
   /* Brand utilities */
   --color-brand-gold: var(--brand-gold);
@@ -190,7 +206,7 @@
     @apply border-border outline-ring/50;
   }
   html {
-    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: "DVAG Type", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     color: var(--text-default);
   }
   body {
@@ -250,7 +266,7 @@
   }
 
   .tc-eyebrow {
-    color: var(--brand-blue);
+    color: var(--brand-gold-darker);
     font-size: 0.78rem;
     font-weight: 800;
     letter-spacing: 0.12em;
@@ -301,18 +317,18 @@
     align-items: center;
     justify-content: center;
     border-radius: 0.5rem;
-    background: var(--brand-blue);
+    background: var(--brand-gold);
     color: white;
     font-weight: 800;
     line-height: 1.2;
     transition: background-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
-    box-shadow: 0 10px 22px rgba(11, 82, 100, 0.18);
+    box-shadow: 0 10px 22px rgba(160, 136, 27, 0.2);
   }
 
   .tc-button-primary:hover {
-    background: var(--brand-blue-deep);
+    background: var(--brand-gold-dark);
     transform: translateY(-1px);
-    box-shadow: 0 14px 28px rgba(11, 82, 100, 0.22);
+    box-shadow: 0 14px 28px rgba(160, 136, 27, 0.26);
   }
 
   .tc-button-secondary {
@@ -335,7 +351,7 @@
   }
 
   .tc-link {
-    color: var(--brand-blue);
+    color: var(--brand-gold-darker);
     font-weight: 800;
     text-decoration-line: underline;
     text-decoration-thickness: 2px;
@@ -343,7 +359,7 @@
   }
 
   .tc-link:hover {
-    color: var(--brand-blue-deep);
+    color: var(--brand-gold-deepest);
     text-decoration-line: none;
   }
 

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Euro symbol">
+  <defs>
+    <linearGradient id="gold" x1="20%" x2="80%" y1="10%" y2="90%">
+      <stop offset="0" stop-color="#fff2a8"/>
+      <stop offset="0.45" stop-color="#c8aa22"/>
+      <stop offset="1" stop-color="#786614"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="12" dy="18" stdDeviation="12" flood-color="#50440d" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="28" fill="#f9f6e9"/>
+  <path filter="url(#shadow)" fill="url(#gold)" d="M336 98c-72 0-129 43-150 110h-44l-18 44h53v24h-35l-18 44h61c22 59 76 94 148 94 39 0 75-10 104-30l-28-58c-20 15-44 23-71 23-34 0-62-14-78-39h111l18-44H247c-1-5-1-10-1-15v-8h157l18-44H257c16-28 45-43 81-43 27 0 50 8 70 24l29-59c-29-16-62-23-101-23z"/>
+</svg>
