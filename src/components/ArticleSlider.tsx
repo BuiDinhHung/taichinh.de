@@ -31,14 +31,14 @@ export function ArticleSlider() {
   };
 
   return (
-    <section className="bg-surface py-10 sm:py-14 lg:py-24">
+    <section className="tc-section">
       <div className="dvag-container">
         <div className="flex items-end justify-between gap-4 sm:gap-6">
           <div className="max-w-2xl">
-            <p className="text-sm font-bold uppercase tracking-wider text-brand-gold">
+            <p className="tc-eyebrow">
               Tin tức tài chính
             </p>
-            <h2 className="mt-3 text-2xl font-bold leading-[1.15] text-text-strong dark:text-foreground sm:text-4xl lg:text-[40px]">
+            <h2 className="tc-heading-lg mt-3 dark:text-foreground">
               Bài viết tài chính đáng đọc
             </h2>
           </div>
@@ -48,7 +48,7 @@ export function ArticleSlider() {
                 type="button"
                 aria-label="Bài trước"
                 onClick={() => scroll(-1)}
-                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-brand-gold text-brand-gold-darker transition-colors hover:bg-brand-gold-tint dark:text-primary dark:hover:bg-accent"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-brand-blue text-brand-blue transition-colors hover:bg-brand-blue-tint dark:text-primary dark:hover:bg-accent"
               >
                 <ChevronLeftIcon className="h-5 w-5" />
               </button>
@@ -56,7 +56,7 @@ export function ArticleSlider() {
                 type="button"
                 aria-label="Bài tiếp"
                 onClick={() => scroll(1)}
-                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-brand-gold text-brand-gold-darker transition-colors hover:bg-brand-gold-tint dark:text-primary dark:hover:bg-accent"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-brand-blue text-brand-blue transition-colors hover:bg-brand-blue-tint dark:text-primary dark:hover:bg-accent"
               >
                 <ChevronRightIcon className="h-5 w-5" />
               </button>
@@ -72,7 +72,7 @@ export function ArticleSlider() {
             <article
               key={item.href}
               data-article-card
-              className="group flex shrink-0 basis-[86%] flex-col overflow-hidden rounded-sm bg-white shadow-[0_2px_8px_rgba(0,0,0,0.06)] min-[420px]:basis-[78%] sm:basis-[58%] md:basis-[42%] lg:basis-[30%] dark:bg-card"
+              className="tc-card group flex shrink-0 basis-[86%] flex-col overflow-hidden rounded-lg min-[420px]:basis-[78%] sm:basis-[58%] md:basis-[42%] lg:basis-[30%] dark:bg-card"
             >
               <div className="relative aspect-[16/10] overflow-hidden">
                 {item.unoptimizedImage ? (
@@ -93,10 +93,10 @@ export function ArticleSlider() {
                 )}
               </div>
               <div className="flex flex-1 flex-col gap-3 p-4 sm:p-6">
-                <span className="self-start rounded-sm bg-brand-gold-tint-2 px-2.5 py-1 text-xs font-bold uppercase tracking-wider text-brand-gold-deepest">
+                <span className="self-start rounded-sm bg-brand-blue-tint px-2.5 py-1 text-xs font-extrabold uppercase tracking-[0.1em] text-brand-blue-deep">
                   {item.category}
                 </span>
-                <h3 className="text-base font-bold leading-snug text-text-strong dark:text-foreground sm:text-lg lg:text-xl">
+                <h3 className="text-base font-extrabold leading-snug text-text-strong dark:text-foreground sm:text-lg lg:text-xl">
                   {item.title}
                 </h3>
                 {item.excerpt && (
@@ -106,7 +106,7 @@ export function ArticleSlider() {
                 )}
                 <Link
                   href={item.href}
-                  className="mt-auto inline-flex items-center gap-2 self-start text-sm font-bold text-brand-gold-darker underline decoration-2 underline-offset-4 hover:no-underline dark:text-primary"
+                  className="tc-link mt-auto inline-flex items-center gap-2 self-start text-sm dark:text-primary"
                 >
                   Đọc tiếp
                   <ArrowRightIcon className="h-4 w-4" />
@@ -119,7 +119,7 @@ export function ArticleSlider() {
         <div className="mt-6 text-center sm:mt-8">
           <Link
             href="/archive"
-            className="inline-flex items-center justify-center rounded-md border border-brand-gold px-5 py-2.5 text-sm font-bold text-brand-gold-darker transition-colors hover:bg-brand-gold-tint dark:text-primary dark:hover:bg-accent sm:px-6 sm:py-3 sm:text-base"
+            className="tc-button-secondary px-5 py-2.5 text-sm dark:text-primary dark:hover:bg-accent sm:px-6 sm:py-3 sm:text-base"
           >
             Tất cả bài viết
           </Link>

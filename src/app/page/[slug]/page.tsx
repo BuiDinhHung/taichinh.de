@@ -35,10 +35,10 @@ export default async function StaticPageRoute({
     <>
       <Header />
       <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
-        <article className="py-10 lg:py-14">
+        <article className="tc-section">
           <div className="tc-container">
             <header className="max-w-3xl">
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-foreground">
+              <h1 className="tc-heading-xl dark:text-foreground">
                 {page.title}
               </h1>
             </header>

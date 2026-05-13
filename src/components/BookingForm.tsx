@@ -40,9 +40,9 @@ export function BookingForm() {
   };
 
   const inputBase =
-    "w-full rounded-md border border-border-default bg-white px-4 py-2.5 text-sm text-text-strong placeholder:text-text-muted focus:border-brand-gold focus:outline-none focus:ring-2 focus:ring-brand-gold/30 transition-colors dark:bg-card dark:text-foreground";
+    "w-full rounded-md border border-border-default bg-white px-4 py-3 text-sm font-medium text-text-strong placeholder:text-text-muted focus:border-brand-blue focus:outline-none focus:ring-2 focus:ring-brand-blue/20 transition-colors dark:bg-card dark:text-foreground";
   const labelBase =
-    "block text-sm font-bold text-text-strong dark:text-foreground";
+    "block text-sm font-extrabold text-text-strong dark:text-foreground";
   const errorClass = (cond: boolean) =>
     cond && touched ? " border-brand-red focus:ring-brand-red/30" : "";
 
@@ -168,7 +168,7 @@ export function BookingForm() {
         <button
           type="button"
           onClick={() => submit("whatsapp")}
-          className="inline-flex items-center justify-center gap-2 rounded-md bg-[#25D366] px-6 py-3 text-base font-bold text-white transition-colors hover:bg-[#1ebe5a]"
+          className="inline-flex items-center justify-center gap-2 rounded-md bg-[#25D366] px-6 py-3 text-base font-extrabold text-white transition-colors hover:bg-[#1ebe5a]"
         >
           <WhatsAppIcon className="h-5 w-5" />
           Gửi qua WhatsApp
@@ -176,7 +176,7 @@ export function BookingForm() {
         <button
           type="button"
           onClick={() => submit("email")}
-          className="inline-flex items-center justify-center gap-2 rounded-md bg-brand-gold px-6 py-3 text-base font-bold text-white transition-colors hover:bg-brand-gold-dark"
+          className="tc-button-primary gap-2 px-6 py-3 text-base"
         >
           <MailIcon className="h-5 w-5" />
           Gửi qua Email

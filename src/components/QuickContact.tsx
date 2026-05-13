@@ -38,16 +38,16 @@ export function QuickContact() {
           href={href}
           target={href.startsWith("http") ? "_blank" : undefined}
           rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
-          className="group flex items-center gap-3 rounded-xl border border-border-default bg-white p-4 transition-colors hover:border-brand-gold hover:bg-brand-gold-tint dark:bg-card dark:hover:bg-accent"
+          className="tc-card group flex items-center gap-3 rounded-lg p-4 transition-colors hover:border-brand-blue hover:bg-brand-blue-tint dark:bg-card dark:hover:bg-accent"
         >
-          <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand-gold-tint text-brand-gold-darker group-hover:bg-brand-gold group-hover:text-white transition-colors dark:bg-accent dark:text-primary dark:group-hover:bg-primary dark:group-hover:text-primary-foreground">
+          <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand-blue-tint text-brand-blue transition-colors group-hover:bg-brand-blue group-hover:text-white dark:bg-accent dark:text-primary dark:group-hover:bg-primary dark:group-hover:text-primary-foreground">
             <Icon className="h-5 w-5" />
           </span>
           <span className="min-w-0 flex-1">
-            <span className="block text-xs font-bold uppercase tracking-wider text-text-muted">
+            <span className="block text-xs font-extrabold uppercase tracking-[0.12em] text-text-muted">
               {label}
             </span>
-            <span className="block truncate text-sm font-bold text-text-strong dark:text-foreground">
+            <span className="block truncate text-sm font-extrabold text-text-strong dark:text-foreground">
               {value}
             </span>
           </span>
