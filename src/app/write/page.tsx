@@ -1,20 +1,15 @@
 import type { Metadata } from "next";
-import { redirect } from "next/navigation";
 import { Suspense } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { BlockEditor } from "@/components/BlockEditor";
-import { getCurrentUsername } from "@/lib/server/auth";
 
 export const metadata: Metadata = {
   title: "Viết bài - taichinh.de",
   description: "Soạn và lưu bài viết trực tiếp vào bộ nhớ.",
 };
 
-export default async function WritePage() {
-  const username = await getCurrentUsername();
-  if (!username) redirect("/login?next=/write");
-
+export default function WritePage() {
   return (
     <>
       <Header />

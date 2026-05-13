@@ -1,20 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { redirect } from "next/navigation";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { DraftList } from "@/components/DraftList";
-import { getCurrentUsername } from "@/lib/server/auth";
 
 export const metadata: Metadata = {
   title: "Quản lý bài viết - taichinh.de",
   description: "Quản lý các bài viết đã lưu trong bộ nhớ.",
 };
 
-export default async function DraftsPage() {
-  const username = await getCurrentUsername();
-  if (!username) redirect("/login?next=/drafts");
-
+export default function DraftsPage() {
   return (
     <>
       <Header />

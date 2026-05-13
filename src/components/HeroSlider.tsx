@@ -50,12 +50,12 @@ export function HeroSlider({
   const currentSlide = slides[currentIndex];
 
   return (
-    <section className="relative isolate overflow-hidden bg-brand-gold">
+    <section className="relative isolate overflow-hidden bg-surface-soft">
       <div className="absolute inset-0">
         {slides.map((slide, index) => (
           <div
             key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ease-out ${
+            className={`absolute inset-0 lg:left-[38%] transition-opacity duration-1000 ease-out ${
               index === currentIndex ? "opacity-100" : "opacity-0"
             }`}
             aria-hidden={index !== currentIndex}
@@ -65,13 +65,12 @@ export function HeroSlider({
               alt=""
               fill
               priority={index === 0}
-              sizes="100vw"
+              sizes="(min-width: 1024px) 62vw, 100vw"
               className="object-cover object-center"
             />
           </div>
         ))}
-        <div className="absolute inset-0 bg-white/20" />
-        <div className="absolute inset-y-0 left-0 hidden w-2/5 bg-white/45 backdrop-blur-[1px] sm:block" />
+        <div className="absolute inset-0 bg-white/20 lg:left-[38%]" />
       </div>
 
       <div className="dvag-container relative min-h-[520px] py-8 sm:min-h-[620px] sm:py-10 lg:min-h-[680px] lg:py-16">

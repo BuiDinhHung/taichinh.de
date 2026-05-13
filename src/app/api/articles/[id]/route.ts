@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
 import { deleteDbArticle, getDbArticleById } from "@/lib/server/articles";
-import { requireAdmin } from "@/lib/server/auth";
 
 export async function GET(
   _request: Request,
@@ -19,15 +18,13 @@ export async function DELETE(
   { params }: { params: Promise<{ id: string }> },
 ) {
   try {
-    await requireAdmin();
     const { id } = await params;
     await deleteDbArticle(id);
     return NextResponse.json({ ok: true });
-  } catch (error) {
-    const unauthorized = error instanceof Error && error.message === "Unauthorized";
+  } catch {
     return NextResponse.json(
-      { ok: false, message: unauthorized ? "Bạn cần đăng nhập." : "Không xóa được bài viết." },
-      { status: unauthorized ? 401 : 500 },
+      { ok: false, message: "Không xóa được bài viết." },
+      { status: 500 },
     );
   }
 }
