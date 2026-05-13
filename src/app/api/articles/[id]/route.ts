@@ -5,12 +5,29 @@ export async function GET(
   _request: Request,
   { params }: { params: Promise<{ id: string }> },
 ) {
-  const { id } = await params;
-  const article = await getDbArticleById(id);
-  if (!article) {
-    return NextResponse.json({ ok: false, message: "Không tìm thấy bài viết." }, { status: 404 });
+  try {
+    const { id } = await params;
+    const article = await getDbArticleById(id);
+    if (!article) {
+      return NextResponse.json(
+        { ok: false, message: "Không tìm thấy bài viết." },
+        { status: 404 },
+      );
+    }
+    return NextResponse.json({ article });
+  } catch (error) {
+    console.error("Failed to load Firebase article", error);
+    return NextResponse.json(
+      {
+        ok: false,
+        message:
+          error instanceof Error
+            ? error.message
+            : "Không tải được bài viết.",
+      },
+      { status: 500 },
+    );
   }
-  return NextResponse.json({ article });
 }
 
 export async function DELETE(
@@ -21,9 +38,16 @@ export async function DELETE(
     const { id } = await params;
     await deleteDbArticle(id);
     return NextResponse.json({ ok: true });
-  } catch {
+  } catch (error) {
+    console.error("Failed to delete Firebase article", error);
     return NextResponse.json(
-      { ok: false, message: "Không xóa được bài viết." },
+      {
+        ok: false,
+        message:
+          error instanceof Error
+            ? error.message
+            : "Không xóa được bài viết.",
+      },
       { status: 500 },
     );
   }

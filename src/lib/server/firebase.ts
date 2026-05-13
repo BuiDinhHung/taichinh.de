@@ -18,6 +18,17 @@ function loadServiceAccount(): ServiceAccount {
   const json = process.env.FIREBASE_SERVICE_ACCOUNT_JSON;
   const base64 = process.env.FIREBASE_SERVICE_ACCOUNT_BASE64;
   const serviceAccountPath = process.env.FIREBASE_SERVICE_ACCOUNT_PATH;
+  const projectId = process.env.FIREBASE_PROJECT_ID;
+  const clientEmail = process.env.FIREBASE_CLIENT_EMAIL;
+  const privateKey = process.env.FIREBASE_PRIVATE_KEY;
+
+  if (projectId && clientEmail && privateKey) {
+    return {
+      project_id: projectId,
+      client_email: clientEmail,
+      private_key: normalizePrivateKey(privateKey),
+    };
+  }
 
   let raw: string | null = null;
 
@@ -31,7 +42,7 @@ function loadServiceAccount(): ServiceAccount {
 
   if (!raw) {
     throw new Error(
-      "Missing Firebase credentials. Set FIREBASE_SERVICE_ACCOUNT_JSON, FIREBASE_SERVICE_ACCOUNT_BASE64, or FIREBASE_SERVICE_ACCOUNT_PATH.",
+      "Missing Firebase credentials. Set FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, and FIREBASE_PRIVATE_KEY, or set FIREBASE_SERVICE_ACCOUNT_JSON, FIREBASE_SERVICE_ACCOUNT_BASE64, or FIREBASE_SERVICE_ACCOUNT_PATH.",
     );
   }
 
