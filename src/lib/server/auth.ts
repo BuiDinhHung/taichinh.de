@@ -26,7 +26,9 @@ export function hashPassword(password: string): string {
   return `scrypt:${salt}:${hash}`;
 }
 
-export function verifyPassword(password: string, stored: string): boolean {
+export function verifyPassword(password: string, stored: unknown): boolean {
+  if (typeof stored !== "string") return false;
+
   const [method, salt, hash] = stored.split(":");
   if (method !== "scrypt" || !salt || !hash) return false;
 
