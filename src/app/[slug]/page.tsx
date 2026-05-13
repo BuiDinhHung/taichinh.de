@@ -71,21 +71,21 @@ export default async function ArticlePage({
       <>
         <Header />
         <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
-          <article className="tc-section">
+          <article className="py-10 lg:py-14">
             <div className="tc-container">
               <Link
                 href="/archive"
-                className="tc-link inline-flex items-center gap-1.5 text-sm"
+                className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 <ChevronLeftIcon className="h-4 w-4" />
                 Tất cả bài viết
               </Link>
 
               <header className="mt-6 max-w-3xl">
-                <p className="tc-eyebrow">
+                <p className="text-xs font-bold uppercase tracking-wider text-brand-gold">
                   {dbArticle.category}
                 </p>
-                <h1 className="tc-heading-xl mt-2 dark:text-foreground">
+                <h1 className="mt-2 text-3xl sm:text-4xl lg:text-5xl font-bold leading-[1.15] tracking-tight text-foreground">
                   {dbArticle.title}
                 </h1>
                 <p className="mt-4 text-sm text-muted-foreground">{date}</p>
@@ -93,7 +93,7 @@ export default async function ArticlePage({
 
               {coverImage ? (
                 <div
-                  className="mt-8 aspect-[16/9] w-full overflow-hidden rounded-lg bg-cover bg-center bg-muted shadow-[0_12px_30px_rgba(15,23,42,0.08)]"
+                  className="mt-8 aspect-[16/9] w-full overflow-hidden rounded-2xl bg-cover bg-center bg-muted"
                   style={{ backgroundImage: `url("${coverImage.replace(/"/g, "%22")}")` }}
                   role="img"
                   aria-label={dbArticle.title}
@@ -129,24 +129,24 @@ export default async function ArticlePage({
     <>
       <Header />
       <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
-        <article className="tc-section">
+        <article className="py-10 lg:py-14">
           <div className="tc-container">
             <Link
               href="/"
-              className="tc-link inline-flex items-center gap-1.5 text-sm"
+              className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               <ChevronLeftIcon className="h-4 w-4" />
               Tất cả bài viết
             </Link>
 
             <header className="mt-6 max-w-3xl">
-              <h1 className="tc-heading-xl dark:text-foreground">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-[1.15] tracking-tight text-foreground">
                 {article.title}
               </h1>
               <p className="mt-4 text-sm text-muted-foreground">{article.date}</p>
             </header>
 
-            <div className="relative mt-8 aspect-[16/9] w-full overflow-hidden rounded-lg bg-muted shadow-[0_12px_30px_rgba(15,23,42,0.08)]">
+            <div className="mt-8 relative aspect-[16/9] w-full overflow-hidden rounded-2xl bg-muted">
               <Image
                 src={article.image}
                 alt={article.title}
@@ -173,12 +173,12 @@ export default async function ArticlePage({
                 {prev ? (
                   <Link
                     href={`/${prev.slug}`}
-                    className="tc-card group rounded-lg p-5 transition-colors hover:border-brand-blue/50 hover:bg-brand-blue-tint"
+                    className="group rounded-xl border border-border p-5 transition-colors hover:border-primary/50 hover:bg-accent"
                   >
                     <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
                       ← Bài trước
                     </p>
-                    <p className="mt-2 text-base font-extrabold leading-snug group-hover:text-brand-blue">
+                    <p className="mt-2 text-base font-bold leading-snug group-hover:text-primary">
                       {prev.title}
                     </p>
                   </Link>
@@ -186,12 +186,12 @@ export default async function ArticlePage({
                 {next ? (
                   <Link
                     href={`/${next.slug}`}
-                    className="tc-card group rounded-lg p-5 transition-colors hover:border-brand-blue/50 hover:bg-brand-blue-tint sm:text-right"
+                    className="group rounded-xl border border-border p-5 transition-colors hover:border-primary/50 hover:bg-accent sm:text-right"
                   >
                     <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
                       Bài tiếp →
                     </p>
-                    <p className="mt-2 text-base font-extrabold leading-snug group-hover:text-brand-blue">
+                    <p className="mt-2 text-base font-bold leading-snug group-hover:text-primary">
                       {next.title}
                     </p>
                   </Link>
@@ -206,7 +206,7 @@ export default async function ArticlePage({
                 <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
                   {related.map((r) => (
                     <Link key={r.slug} href={`/${r.slug}`} className="group block">
-                      <div className="relative aspect-[16/9] w-full overflow-hidden rounded-lg bg-muted shadow-[0_12px_30px_rgba(15,23,42,0.08)]">
+                      <div className="relative aspect-[16/9] w-full overflow-hidden rounded-xl bg-muted">
                         <Image
                           src={r.image}
                           alt={r.title}
@@ -215,7 +215,7 @@ export default async function ArticlePage({
                           className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                         />
                       </div>
-                      <h3 className="mt-3 text-base font-extrabold leading-snug transition-colors group-hover:text-brand-blue">
+                      <h3 className="mt-3 text-base font-bold leading-snug group-hover:text-primary transition-colors">
                         {r.title}
                       </h3>
                       <p className="mt-1 text-xs text-muted-foreground">{r.date}</p>

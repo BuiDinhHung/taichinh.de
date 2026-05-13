@@ -23,16 +23,16 @@ export function RatingsSection() {
   };
 
   return (
-    <section className="tc-section-muted">
+    <section className="bg-surface-soft py-10 sm:py-14 lg:py-24">
       <div className="dvag-container">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="tc-eyebrow">
+          <p className="text-sm font-bold uppercase tracking-wider text-brand-gold">
             Đánh giá khách hàng
           </p>
-          <h2 className="tc-heading-lg mt-3 dark:text-foreground">
+          <h2 className="mt-3 text-2xl font-bold leading-[1.15] text-text-strong dark:text-foreground sm:text-4xl lg:text-[40px]">
             Khách hàng nói gì về chúng tôi
           </h2>
-          <p className="tc-body-lg mt-4 dark:text-foreground/80 sm:mt-5">
+          <p className="mt-4 text-base leading-relaxed text-text-default dark:text-foreground/80 sm:mt-5 sm:text-lg">
             Lắng nghe chia sẻ thật từ cộng đồng người Việt tại Đức trong hành trình tài chính của họ.
           </p>
         </div>
@@ -46,7 +46,7 @@ export function RatingsSection() {
               <article
                 key={rating.name}
                 data-rating-card
-                className="tc-card flex shrink-0 basis-[86%] flex-col gap-3 rounded-lg p-5 min-[420px]:basis-[78%] sm:basis-[58%] sm:p-6 md:basis-[40%] lg:basis-[28%] dark:bg-card"
+                className="flex shrink-0 basis-[86%] flex-col gap-3 rounded-sm bg-white p-5 shadow-[0_2px_8px_rgba(0,0,0,0.06)] min-[420px]:basis-[78%] sm:basis-[58%] sm:p-6 md:basis-[40%] lg:basis-[28%] dark:bg-card"
               >
                 <div className="flex items-center gap-1 text-brand-gold">
                   {Array.from({ length: 5 }).map((_, i) => (
@@ -77,7 +77,7 @@ export function RatingsSection() {
                 type="button"
                 aria-label="Đánh giá trước"
                 onClick={() => scroll(-1)}
-                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-brand-blue text-brand-blue transition-colors hover:bg-brand-blue-tint dark:text-primary dark:hover:bg-accent"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-brand-gold text-brand-gold-darker transition-colors hover:bg-brand-gold-tint dark:text-primary dark:hover:bg-accent"
               >
                 <ChevronLeftIcon className="h-5 w-5" />
               </button>
@@ -85,7 +85,7 @@ export function RatingsSection() {
                 type="button"
                 aria-label="Đánh giá tiếp"
                 onClick={() => scroll(1)}
-                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-brand-blue text-brand-blue transition-colors hover:bg-brand-blue-tint dark:text-primary dark:hover:bg-accent"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-brand-gold text-brand-gold-darker transition-colors hover:bg-brand-gold-tint dark:text-primary dark:hover:bg-accent"
               >
                 <ChevronRightIcon className="h-5 w-5" />
               </button>
@@ -96,7 +96,7 @@ export function RatingsSection() {
         <div className="mt-6 text-center sm:mt-8">
           <Link
             href="/page/contact"
-            className="tc-button-secondary px-5 py-2.5 text-sm dark:text-primary dark:hover:bg-accent sm:px-6 sm:py-3 sm:text-base"
+            className="inline-flex items-center justify-center rounded-md border border-brand-gold px-5 py-2.5 text-sm font-bold text-brand-gold-darker transition-colors hover:bg-brand-gold-tint dark:text-primary dark:hover:bg-accent sm:px-6 sm:py-3 sm:text-base"
           >
             Để lại đánh giá của bạn
           </Link>

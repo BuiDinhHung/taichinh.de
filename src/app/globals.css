@@ -4,22 +4,6 @@
 
 @custom-variant dark (&:is(.dark *));
 
-@font-face {
-  font-family: "DVAG Type";
-  src: url("/fonts/DVAGType_W_Rg.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "DVAG Type";
-  src: url("/fonts/DVAGType_W_Bd.woff2") format("woff2");
-  font-weight: 700 900;
-  font-style: normal;
-  font-display: swap;
-}
-
 /* ------------------------------------------------------------------
    DVAG visual identity applied to taichinh.de content
    ------------------------------------------------------------------ */
@@ -29,32 +13,32 @@
   --brand-gold-dark: #a0881b;
   --brand-gold-darker: #786614;
   --brand-gold-deepest: #50440d;
-  --brand-gold-tint: #fbf7e6;
-  --brand-gold-tint-2: #f0e4b8;
+  --brand-gold-tint: #f9f6e9;
+  --brand-gold-tint-2: #f4eed2;
 
   /* Brand red */
   --brand-red: #9d2235;
   --brand-red-tint: #f5e9eb;
 
   /* Brand blue (info) */
-  --brand-blue-deep: #50440d;
-  --brand-blue: #786614;
-  --brand-blue-mid: #a0881b;
-  --brand-blue-light: #c8aa22;
-  --brand-blue-tint: #f9f6e9;
-  --brand-blue-tint-2: #f4eed2;
+  --brand-blue-deep: #004663;
+  --brand-blue: #00587c;
+  --brand-blue-mid: #196989;
+  --brand-blue-light: #337996;
+  --brand-blue-tint: #e6eef2;
+  --brand-blue-tint-2: #ccdde4;
 
   /* Greys / surfaces */
-  --text-strong: #20272d;
-  --text-default: #3f4a53;
-  --text-muted: #68727b;
-  --text-subtle: #9099a1;
+  --text-strong: #333333;
+  --text-default: #4d4d4d;
+  --text-muted: #666666;
+  --text-subtle: #999999;
   --surface: #ffffff;
-  --surface-soft: #f6f7f5;
-  --border-default: #dde2e4;
-  --border-strong: #334047;
-  --divider: #e8ecee;
-  --ink: #20272d;
+  --surface-soft: #f2f2f2;
+  --border-default: #d9d9d9;
+  --border-strong: #404040;
+  --divider: #e6e6e6;
+  --ink: #393939;
 
   --success: #7a9a01;
   --focus-ring: #569ff7;
@@ -64,8 +48,8 @@
   --container-max: 1216px;
 
   /* shadcn token mapping */
-  --background: #fdfdfb;
-  --foreground: #3f4a53;
+  --background: #ffffff;
+  --foreground: #4d4d4d;
   --card: #ffffff;
   --card-foreground: #333333;
   --popover: #ffffff;
@@ -73,10 +57,10 @@
   --primary: #c8aa22;
   --primary-foreground: #ffffff;
   --primary-hover: #a0881b;
-  --secondary: #f6f7f5;
-  --secondary-foreground: #20272d;
-  --muted: #f6f7f5;
-  --muted-foreground: #68727b;
+  --secondary: #f2f2f2;
+  --secondary-foreground: #333333;
+  --muted: #f2f2f2;
+  --muted-foreground: #666666;
   --accent: #f9f6e9;
   --accent-foreground: #50440d;
   --destructive: #9d2235;
@@ -138,8 +122,8 @@
 }
 
 @theme inline {
-  --font-sans: "DVAG Type", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --font-heading: "DVAG Type", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-sans: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-heading: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
   /* Brand utilities */
   --color-brand-gold: var(--brand-gold);
@@ -206,16 +190,14 @@
     @apply border-border outline-ring/50;
   }
   html {
-    font-family: "DVAG Type", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     color: var(--text-default);
   }
   body {
     background: var(--background);
     color: var(--text-default);
-    font-size: 16px;
-    line-height: 1.65;
+    line-height: 1.5;
     -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
   }
   html[data-embedded="true"],
   html[data-embedded="true"] body {
@@ -228,16 +210,9 @@
   }
   h1, h2, h3, h4, h5, h6 {
     color: var(--text-strong);
-    font-weight: 800;
-    line-height: 1.12;
+    font-weight: 700;
+    line-height: 1.15;
     letter-spacing: 0;
-  }
-  p {
-    color: var(--text-default);
-  }
-  ::selection {
-    background: var(--brand-gold-tint-2);
-    color: var(--text-strong);
   }
   .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
     color: var(--foreground);
@@ -251,127 +226,6 @@
     margin-inline: auto;
     padding-inline: 1.25rem;
     max-width: var(--container-max);
-  }
-
-  .tc-section {
-    padding-block: clamp(3.5rem, 7vw, 6rem);
-    background: var(--surface);
-  }
-
-  .tc-section-muted {
-    padding-block: clamp(3.5rem, 7vw, 6rem);
-    background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.62), rgba(255, 255, 255, 0)),
-      var(--surface-soft);
-  }
-
-  .tc-eyebrow {
-    color: var(--brand-gold-darker);
-    font-size: 0.78rem;
-    font-weight: 800;
-    letter-spacing: 0.12em;
-    line-height: 1.4;
-    text-transform: uppercase;
-  }
-
-  .tc-heading-xl {
-    color: var(--text-strong);
-    font-size: clamp(2.25rem, 5vw, 4rem);
-    font-weight: 850;
-    line-height: 1.05;
-  }
-
-  .tc-heading-lg {
-    color: var(--text-strong);
-    font-size: clamp(2rem, 4vw, 2.75rem);
-    font-weight: 850;
-    line-height: 1.1;
-  }
-
-  .tc-heading-md {
-    color: var(--text-strong);
-    font-size: clamp(1.35rem, 2.4vw, 1.65rem);
-    font-weight: 800;
-    line-height: 1.2;
-  }
-
-  .tc-body-lg {
-    color: var(--text-default);
-    font-size: clamp(1.05rem, 1.6vw, 1.16rem);
-    line-height: 1.78;
-  }
-
-  .tc-body {
-    color: var(--text-default);
-    line-height: 1.72;
-  }
-
-  .tc-card {
-    border: 1px solid var(--divider);
-    background: rgba(255, 255, 255, 0.96);
-    box-shadow: 0 14px 34px rgba(15, 23, 42, 0.07);
-  }
-
-  .tc-button-primary {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 0.5rem;
-    background: var(--brand-gold);
-    color: white;
-    font-weight: 800;
-    line-height: 1.2;
-    transition: background-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
-    box-shadow: 0 10px 22px rgba(160, 136, 27, 0.2);
-  }
-
-  .tc-button-primary:hover {
-    background: var(--brand-gold-dark);
-    transform: translateY(-1px);
-    box-shadow: 0 14px 28px rgba(160, 136, 27, 0.26);
-  }
-
-  .tc-button-secondary {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 0.5rem;
-    border: 1px solid var(--brand-gold);
-    background: rgba(255, 255, 255, 0.78);
-    color: var(--brand-gold-darker);
-    font-weight: 800;
-    line-height: 1.2;
-    transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease;
-  }
-
-  .tc-button-secondary:hover {
-    border-color: var(--brand-gold-dark);
-    background: var(--brand-gold-tint);
-    color: var(--brand-gold-deepest);
-  }
-
-  .tc-link {
-    color: var(--brand-gold-darker);
-    font-weight: 800;
-    text-decoration-line: underline;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 4px;
-  }
-
-  .tc-link:hover {
-    color: var(--brand-gold-deepest);
-    text-decoration-line: none;
-  }
-
-  .dark .tc-section,
-  .dark .tc-section-muted {
-    background: var(--background);
-  }
-
-  .dark .tc-card {
-    background: var(--card);
-    border-color: var(--border);
-    box-shadow: none;
   }
   @media (min-width: 768px) {
     .tc-container,

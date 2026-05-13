@@ -20,18 +20,18 @@ export function Footer() {
   return (
     <footer className="bg-surface">
       {/* Strip 1 — Awards & Social (DVAG-style) */}
-      <div className="tc-section-muted">
+      <div className="bg-surface-soft py-12 lg:py-16">
         <div className="dvag-container grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-12">
           <div>
-            <h3 className="text-lg font-extrabold uppercase tracking-[0.12em] text-text-strong dark:text-foreground">
+            <h3 className="text-lg font-bold uppercase tracking-wider text-text-strong dark:text-foreground">
               Đối tác tài chính hàng đầu
             </h3>
-            <p className="tc-body mt-3 max-w-md text-sm dark:text-foreground/80">
+            <p className="mt-3 max-w-md text-sm leading-relaxed text-text-default dark:text-foreground/80">
               Chúng tôi hợp tác với các nhà cung cấp tài chính, bảo hiểm và đầu tư
               hàng đầu của Đức để mang đến giải pháp phù hợp nhất cho bạn.
             </p>
             <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2">
-              <div className="tc-card relative aspect-[4/3] w-full overflow-hidden rounded-lg p-4 dark:bg-card">
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg border border-divider bg-white p-4 dark:bg-card">
                 <Image
                   src="https://cdn.hashnode.com/res/hashnode/image/upload/v1744307702491/3dd23064-4134-4efb-bc0c-bb70e6b5a9e1.png"
                   alt="Đối tác đầu tư & bảo hiểm"
@@ -40,7 +40,7 @@ export function Footer() {
                   className="object-contain"
                 />
               </div>
-              <div className="tc-card relative aspect-[4/3] w-full overflow-hidden rounded-lg p-4 dark:bg-card">
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg border border-divider bg-white p-4 dark:bg-card">
                 <Image
                   src="https://cdn.hashnode.com/res/hashnode/image/upload/v1746288599663/5ece9a76-713f-4a33-b51c-21c75a02f411.png"
                   alt="Đối tác tài chính"
@@ -53,7 +53,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="text-lg font-extrabold uppercase tracking-[0.12em] text-text-strong dark:text-foreground">
+            <h3 className="text-lg font-bold uppercase tracking-wider text-text-strong dark:text-foreground">
               Theo dõi taichinh.de
             </h3>
             <div className="mt-5 flex flex-wrap gap-3">
@@ -64,13 +64,13 @@ export function Footer() {
                   aria-label={`taichinh.de trên ${label}`}
                   target={href.startsWith("http") ? "_blank" : undefined}
                   rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
-                  className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-brand-blue text-brand-blue transition-colors hover:bg-brand-blue-tint dark:text-primary dark:hover:bg-accent"
+                  className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-brand-gold text-brand-gold-darker transition-colors hover:bg-brand-gold-tint dark:text-primary dark:hover:bg-accent"
                 >
                   <Icon className="h-5 w-5" />
                 </Link>
               ))}
             </div>
-            <p className="tc-body mt-5 max-w-md text-sm text-text-muted">
+            <p className="mt-5 max-w-md text-sm leading-relaxed text-text-muted">
               Tư vấn tài chính bằng tiếng Việt cho cộng đồng người Việt tại Đức —
               đầu tư, tiết kiệm, bảo hiểm, quỹ xây dựng, ngân hàng và năng lượng.
             </p>
@@ -107,7 +107,7 @@ export function Footer() {
           <div className="hidden md:grid md:grid-cols-4 md:gap-8">
             {footerColumns.map((col) => (
               <div key={col.title}>
-                <h4 className="text-sm font-extrabold uppercase tracking-[0.12em] text-text-strong dark:text-foreground">
+                <h4 className="text-sm font-bold uppercase tracking-wider text-text-strong dark:text-foreground">
                   {col.title}
                 </h4>
                 <ul className="mt-4 flex flex-col gap-2.5">

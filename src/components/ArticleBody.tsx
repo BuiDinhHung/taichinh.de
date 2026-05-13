@@ -9,7 +9,7 @@ function renderInline(text: string, key: string) {
       {parts.map((part, i) => {
         if (/^\*\*[^*]+\*\*$/.test(part)) {
           return (
-            <strong key={`${key}-${i}`} className="font-extrabold text-text-strong dark:text-foreground">
+            <strong key={`${key}-${i}`} className="font-semibold text-foreground">
               {part.slice(2, -2)}
             </strong>
           );
@@ -28,7 +28,7 @@ export function ArticleBody({
   unoptimizedImages?: boolean;
 }) {
   return (
-    <div className="space-y-6">
+    <div className="space-y-5">
       {blocks.map((block, idx) => {
         const key = `b-${idx}`;
         switch (block.type) {
@@ -36,7 +36,7 @@ export function ArticleBody({
             return (
               <h2
                 key={key}
-                className="tc-heading-lg mt-12 text-[clamp(1.75rem,3vw,2.25rem)] dark:text-foreground"
+                className="mt-10 text-2xl sm:text-3xl font-bold tracking-tight text-foreground"
               >
                 {block.text}
               </h2>
@@ -45,20 +45,20 @@ export function ArticleBody({
             return (
               <h3
                 key={key}
-                className="tc-heading-md mt-9 dark:text-foreground"
+                className="mt-8 text-xl sm:text-2xl font-bold tracking-tight text-foreground"
               >
                 {block.text}
               </h3>
             );
           case "p":
             return (
-              <p key={key} className="tc-body-lg">
+              <p key={key} className="text-base sm:text-lg leading-relaxed text-foreground/85">
                 {renderInline(block.text, key)}
               </p>
             );
           case "ul":
             return (
-              <ul key={key} className="tc-body-lg ml-5 list-disc space-y-2 marker:text-brand-blue">
+              <ul key={key} className="ml-5 list-disc space-y-2 text-base sm:text-lg leading-relaxed text-foreground/85 marker:text-primary">
                 {block.items.map((item, i) => (
                   <li key={`${key}-${i}`}>{renderInline(item, `${key}-${i}`)}</li>
                 ))}
@@ -66,7 +66,7 @@ export function ArticleBody({
             );
           case "ol":
             return (
-              <ol key={key} className="tc-body-lg ml-5 list-decimal space-y-2 marker:text-brand-blue marker:font-semibold">
+              <ol key={key} className="ml-5 list-decimal space-y-2 text-base sm:text-lg leading-relaxed text-foreground/85 marker:text-primary marker:font-semibold">
                 {block.items.map((item, i) => (
                   <li key={`${key}-${i}`}>{renderInline(item, `${key}-${i}`)}</li>
                 ))}
@@ -75,7 +75,7 @@ export function ArticleBody({
           case "img":
             return (
               <figure key={key} className="my-8">
-                <div className="relative aspect-[16/9] w-full overflow-hidden rounded-lg bg-muted shadow-[0_12px_30px_rgba(15,23,42,0.08)]">
+                <div className="relative aspect-[16/9] w-full overflow-hidden rounded-xl bg-muted">
                   <Image
                     src={block.src}
                     alt={block.alt ?? ""}
@@ -96,7 +96,7 @@ export function ArticleBody({
             return (
               <div
                 key={key}
-                className="my-8 rounded-lg border-l-4 border-brand-blue bg-brand-blue-tint p-5 text-base font-semibold leading-relaxed text-brand-blue-deep dark:bg-accent dark:text-foreground"
+                className="my-8 rounded-lg border-l-4 border-primary bg-brand-gold-tint p-5 text-base font-medium leading-relaxed text-brand-gold-deepest dark:text-foreground dark:bg-accent"
               >
                 {renderInline(block.text, key)}
               </div>

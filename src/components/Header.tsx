@@ -41,8 +41,8 @@ export function Header() {
   return (
     <>
       <header
-        className={`fixed inset-x-0 top-0 z-50 border-b border-divider/70 bg-background/92 backdrop-blur-md transition-shadow ${
-          scrolled ? "shadow-[0_10px_26px_rgba(15,23,42,0.08)]" : ""
+        className={`fixed inset-x-0 top-0 z-50 bg-background/95 backdrop-blur-md transition-shadow ${
+          scrolled ? "shadow-[0_2px_8px_rgba(0,0,0,0.08)]" : ""
         }`}
         style={{ height: "var(--header-height)" }}
       >
@@ -76,7 +76,7 @@ export function Header() {
               >
                 <Link
                   href={item.href}
-                  className="flex items-center gap-1 px-3 py-2 text-[15px] font-bold text-text-strong transition-colors hover:text-brand-blue dark:text-foreground dark:hover:text-primary"
+                  className="flex items-center gap-1 px-3 py-2 text-[15px] font-bold text-text-strong transition-colors hover:text-brand-gold dark:text-foreground dark:hover:text-primary"
                 >
                   {item.label}
                   {item.items && (
@@ -94,7 +94,7 @@ export function Header() {
                         <li key={sub.label}>
                           <Link
                             href={sub.href}
-                            className="block px-4 py-2 text-sm font-medium text-text-default transition-colors hover:bg-brand-blue-tint hover:text-brand-blue-deep dark:text-foreground/80 dark:hover:bg-accent dark:hover:text-primary"
+                            className="block px-4 py-2 text-sm text-text-default transition-colors hover:bg-brand-gold-tint hover:text-brand-gold-deepest dark:text-foreground/80 dark:hover:bg-accent dark:hover:text-primary"
                           >
                             {sub.label}
                           </Link>
@@ -112,19 +112,19 @@ export function Header() {
               type="button"
               aria-label="Chuyển chế độ sáng/tối"
               onClick={() => setIsDark((v) => !v)}
-              className="hidden h-9 w-9 items-center justify-center rounded-md text-text-strong/80 transition-colors hover:bg-brand-blue-tint hover:text-brand-blue-deep dark:text-foreground/70 dark:hover:bg-accent dark:hover:text-foreground sm:inline-flex"
+              className="hidden h-9 w-9 items-center justify-center rounded-md text-text-strong/80 transition-colors hover:bg-brand-gold-tint hover:text-text-strong dark:text-foreground/70 dark:hover:bg-accent dark:hover:text-foreground sm:inline-flex"
             >
               {isDark ? <SunIcon className="h-5 w-5" /> : <MoonIcon className="h-5 w-5" />}
             </button>
             <Link
               href={headerCTAs.primary.href}
-              className="tc-button-primary hidden px-4 py-2.5 text-sm lg:inline-flex"
+              className="hidden items-center justify-center rounded-md bg-brand-gold px-4 py-2.5 text-sm font-bold text-white transition-colors hover:bg-brand-gold-dark lg:inline-flex"
             >
               {headerCTAs.primary.label}
             </Link>
             <Link
               href={headerCTAs.secondary.href}
-              className="tc-button-secondary hidden px-4 py-2.5 text-sm dark:text-primary dark:hover:bg-accent lg:inline-flex"
+              className="hidden items-center justify-center rounded-md border border-brand-gold px-4 py-2.5 text-sm font-bold text-brand-gold-darker transition-colors hover:bg-brand-gold-tint dark:text-primary dark:hover:bg-accent lg:inline-flex"
             >
               {headerCTAs.secondary.label}
             </Link>
@@ -178,14 +178,14 @@ export function Header() {
                 <div className="flex flex-col gap-3 pb-5">
                   <Link
                     href={headerCTAs.primary.href}
-                    className="tc-button-primary px-4 py-3 text-base"
+                    className="inline-flex items-center justify-center rounded-md bg-brand-gold px-4 py-3 text-base font-bold text-white"
                     onClick={() => setMobileOpen(false)}
                   >
                     {headerCTAs.primary.label}
                   </Link>
                   <Link
                     href="/dat-lich"
-                    className="tc-button-secondary px-4 py-3 text-base dark:text-primary"
+                    className="inline-flex items-center justify-center rounded-md border border-brand-gold bg-background px-4 py-3 text-base font-bold text-brand-gold-darker dark:text-primary"
                     onClick={() => setMobileOpen(false)}
                   >
                     Liên hệ

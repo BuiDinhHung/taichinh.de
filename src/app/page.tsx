@@ -1,7 +1,7 @@
 import { Header } from "@/components/Header";
 import { HeroTeaser } from "@/components/HeroTeaser";
 import { FinanzcoachingSection } from "@/components/FinanzcoachingSection";
-import { FinancialVisualsSection } from "@/components/FinancialVisualsSection";
+import { FinancialImageSection } from "@/components/FinancialImageSection";
 import { AdvantagesSection } from "@/components/AdvantagesSection";
 import { TeaserSlider } from "@/components/TeaserSlider";
 import { RatingsSection } from "@/components/RatingsSection";
@@ -16,7 +16,7 @@ export default function Home() {
       <main className="flex-1" style={{ paddingTop: "var(--header-height)" }}>
         <HeroTeaser />
         <FinanzcoachingSection />
-        <FinancialVisualsSection />
+        <FinancialImageSection />
         <AdvantagesSection />
         <TeaserSlider />
         <RatingsSection />

@@ -38,22 +38,22 @@ export function ArchiveList() {
 
   return (
     <>
-      <p className="tc-body mt-4 text-text-muted">
+      <p className="mt-4 text-base text-text-muted">
         {totalCount} bài viết đã xuất bản trên taichinh.de.
       </p>
 
       <div className="mt-12 space-y-12">
         {groups.map(([month, list]) => (
           <div key={month}>
-            <h2 className="text-sm font-extrabold uppercase tracking-[0.12em] text-brand-blue">
+            <h2 className="text-lg font-bold uppercase tracking-wider text-text-muted">
               {month}
             </h2>
-            <ul className="tc-card mt-5 divide-y divide-border-default overflow-hidden rounded-lg">
+            <ul className="mt-5 divide-y divide-border-default border-y border-border-default">
               {list.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="group flex items-center gap-4 px-4 py-5 transition-colors hover:bg-brand-blue-tint/70 dark:hover:bg-accent/50 sm:px-5"
+                    className="group flex items-center gap-4 py-5 transition-colors hover:bg-brand-gold-tint/40 dark:hover:bg-accent/50"
                   >
                     <div className="relative h-14 w-20 sm:h-16 sm:w-24 shrink-0 overflow-hidden rounded-md bg-muted">
                       {item.unoptimizedImage ? (
@@ -74,17 +74,17 @@ export function ArchiveList() {
                       )}
                     </div>
                     <div className="flex-1 min-w-0">
-                      <p className="text-base font-extrabold leading-snug text-text-strong transition-colors group-hover:text-brand-blue-deep dark:text-foreground dark:group-hover:text-primary sm:text-lg">
+                      <p className="text-base sm:text-lg font-bold leading-snug text-text-strong group-hover:text-brand-gold-darker transition-colors dark:text-foreground dark:group-hover:text-primary">
                         {item.title}
                       </p>
                       <p className="mt-1 text-xs sm:text-sm text-text-muted">
-                        <span className="mr-2 rounded bg-brand-blue-tint px-1.5 py-0.5 text-[10px] font-extrabold uppercase tracking-wider text-brand-blue-deep">
+                        <span className="mr-2 rounded bg-brand-gold-tint-2 px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-brand-gold-deepest">
                           {item.category}
                         </span>
                         {item.date}
                       </p>
                     </div>
-                    <span className="shrink-0 text-text-muted transition-colors group-hover:text-brand-blue-deep dark:group-hover:text-primary">
+                    <span className="shrink-0 text-text-muted group-hover:text-brand-gold-darker transition-colors dark:group-hover:text-primary">
                       →
                     </span>
                   </Link>
