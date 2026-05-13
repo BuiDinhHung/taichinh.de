@@ -131,7 +131,7 @@ function EditorInner({ editId }: { editId: string | null }) {
         throw new Error(data?.message || "Không tải ảnh lên được.");
       }
       setImage(data.url);
-      setMessage("Đã tải ảnh lên. Bấm lưu bộ nhớ để lưu vào bài viết.");
+      setMessage("Đã tải ảnh lên Firebase. Bấm lưu bộ nhớ để lưu vào bài viết.");
     } catch (error) {
       setMessage(error instanceof Error ? error.message : "Không tải ảnh lên được.");
     } finally {

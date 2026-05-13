@@ -1,9 +1,10 @@
 import { randomBytes } from "node:crypto";
-import { mkdir, writeFile } from "node:fs/promises";
-import path from "node:path";
 import { NextResponse } from "next/server";
+import { getAdminDb } from "@/lib/server/firebase";
 
 const MAX_IMAGE_SIZE = 5 * 1024 * 1024;
+const CHUNK_SIZE = 800_000;
+const UPLOADS_COLLECTION = "uploads";
 const ALLOWED_TYPES = new Map([
   ["image/jpeg", "jpg"],
   ["image/png", "png"],
@@ -38,23 +39,45 @@ export async function POST(request: Request) {
       );
     }
 
-    const uploadDir = path.join(process.cwd(), "public", "uploads");
-    await mkdir(uploadDir, { recursive: true });
-
-    const filename = `${Date.now()}-${randomBytes(6).toString("hex")}.${extension}`;
-    const filepath = path.join(uploadDir, filename);
+    const id = `${Date.now()}-${randomBytes(6).toString("hex")}`;
     const buffer = Buffer.from(await file.arrayBuffer());
-    await writeFile(filepath, buffer);
+    const base64 = buffer.toString("base64");
+    const chunks = base64.match(new RegExp(`.{1,${CHUNK_SIZE}}`, "g")) ?? [];
+    const db = getAdminDb();
+    const ref = db.collection(UPLOADS_COLLECTION).doc(id);
+    const batch = db.batch();
+
+    batch.set(ref, {
+      contentType: file.type,
+      extension,
+      originalName: file.name || `upload.${extension}`,
+      size: file.size,
+      chunkCount: chunks.length,
+      createdAt: Date.now(),
+    });
+
+    chunks.forEach((data, index) => {
+      batch.set(ref.collection("chunks").doc(String(index).padStart(5, "0")), {
+        index,
+        data,
+      });
+    });
+
+    await batch.commit();
 
     return NextResponse.json({
       ok: true,
-      url: `/uploads/${filename}`,
+      url: `/api/uploads/${id}`,
     });
-  } catch {
+  } catch (error) {
+    console.error("Failed to upload image to Firestore", error);
     return NextResponse.json(
       {
         ok: false,
-        message: "Không tải ảnh lên được.",
+        message:
+          error instanceof Error
+            ? error.message
+            : "Không tải ảnh lên được.",
       },
       { status: 500 },
     );
