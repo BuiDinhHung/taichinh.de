@@ -122,8 +122,8 @@
 }
 
 @theme inline {
-  --font-sans: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --font-heading: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-sans: var(--font-inter), "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-heading: var(--font-inter), "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
   /* Brand utilities */
   --color-brand-gold: var(--brand-gold);
@@ -190,14 +190,16 @@
     @apply border-border outline-ring/50;
   }
   html {
-    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: var(--font-inter), "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     color: var(--text-default);
   }
   body {
     background: var(--background);
     color: var(--text-default);
-    line-height: 1.5;
+    line-height: 1.55;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
   html[data-embedded="true"],
   html[data-embedded="true"] body {
@@ -210,8 +212,9 @@
   }
   h1, h2, h3, h4, h5, h6 {
     color: var(--text-strong);
-    font-weight: 700;
-    line-height: 1.15;
+    font-family: var(--font-inter), "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-weight: 650;
+    line-height: 1.12;
     letter-spacing: 0;
   }
   .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {

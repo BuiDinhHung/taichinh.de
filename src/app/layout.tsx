@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import { EmbeddedScrollbarMode } from "@/components/EmbeddedScrollbarMode";
 import "./globals.css";
+
+const inter = Inter({
+  subsets: ["latin", "vietnamese"],
+  display: "swap",
+  variable: "--font-inter",
+});
 
 export const metadata: Metadata = {
   title: "taichinh.de – Tư vấn chuyên nghiệp tài chính của bạn",
@@ -12,7 +19,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="vi" className="h-full antialiased">
+    <html lang="vi" className={`h-full antialiased ${inter.variable}`}>
       <body className="min-h-full flex flex-col bg-background text-foreground font-sans">
         <EmbeddedScrollbarMode />
         {children}
