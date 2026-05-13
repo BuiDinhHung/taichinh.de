@@ -10,10 +10,9 @@ const SESSION_TTL_MS = 1000 * 60 * 60 * 24 * 7;
 const DEFAULT_ADMIN_USERNAME = "admin";
 const DEFAULT_ADMIN_PASSWORD = "password";
 
-function sessionSecret(): string {
+function sessionSecret(): string | null {
   const secret = process.env.AUTH_SESSION_SECRET;
-  if (!secret) throw new Error("Missing AUTH_SESSION_SECRET.");
-  return secret;
+  return secret || null;
 }
 
 function base64url(input: string | Buffer): string {
@@ -38,17 +37,22 @@ export function verifyPassword(password: string, stored: unknown): boolean {
 }
 
 export function signSession(username: string): string {
+  const secret = sessionSecret();
+  if (!secret) throw new Error("Missing AUTH_SESSION_SECRET.");
   const payload = base64url(JSON.stringify({ username, exp: Date.now() + SESSION_TTL_MS }));
-  const signature = createHmac("sha256", sessionSecret()).update(payload).digest("base64url");
+  const signature = createHmac("sha256", secret).update(payload).digest("base64url");
   return `${payload}.${signature}`;
 }
 
 export function verifySessionToken(token: string | undefined): string | null {
   if (!token) return null;
+  const secret = sessionSecret();
+  if (!secret) return null;
+
   const [payload, signature] = token.split(".");
   if (!payload || !signature) return null;
 
-  const expected = createHmac("sha256", sessionSecret()).update(payload).digest("base64url");
+  const expected = createHmac("sha256", secret).update(payload).digest("base64url");
   const actualBuffer = Buffer.from(signature);
   const expectedBuffer = Buffer.from(expected);
   if (actualBuffer.length !== expectedBuffer.length || !timingSafeEqual(actualBuffer, expectedBuffer)) {
