@@ -491,5 +491,5 @@ export const legalLinks: CTA[] = [
   { label: "Điều khoản", href: "https://hashnode.com/terms" },
 ];
 
-export const copyright = "© 2026 taichinh.de";
+export const copyright = "Copyright © 2026 Hoangcaster";
 export const copyrightLine = copyright;
