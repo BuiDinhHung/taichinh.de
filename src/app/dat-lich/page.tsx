@@ -71,7 +71,7 @@ export default function DatLichPage() {
                 {
                   title: "Miễn phí, không ràng buộc",
                   body:
-                    "Buổi tư vấn đầu tiên hoàn toàn miễn phí. Bạn chỉ quyết định khi đã hiểu rõ và an tâm với phương án đề xuất.",
+                    "Hoàn toàn miễn phí các buổi tư vấn. Bạn chỉ quyết định khi đã hiểu rõ và an tâm với phương án đề xuất.",
                 },
               ].map((item) => (
                 <div key={item.title} className="rounded-xl border border-border-default bg-white p-6 dark:bg-card">

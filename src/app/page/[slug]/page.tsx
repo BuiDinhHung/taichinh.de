@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ArticleBody } from "@/components/ArticleBody";
+import { AdvisorProfileSection } from "@/components/AdvisorProfileSection";
 import { staticPages } from "@/lib/static-pages";
 
 export function generateStaticParams() {
@@ -46,6 +47,7 @@ export default async function StaticPageRoute({
               <ArticleBody blocks={page.blocks} />
             </div>
           </div>
+          {slug === "gioi-thieu" ? <AdvisorProfileSection /> : null}
         </article>
       </main>
       <Footer />

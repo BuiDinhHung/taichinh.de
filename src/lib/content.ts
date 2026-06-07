@@ -66,7 +66,7 @@ export const heroSlides = [
     headline: "Tư vấn chuyên nghiệp tài chính của bạn",
     cta: { label: "Tìm hiểu thêm", href: "/quan-ly-chuyen-nghiep-cho-tai-chinh-cua-ban" } as CTA,
     image: {
-      src: "/images/article-03-tu-van-chuyen-nghiep.jpeg",
+      src: "/images/client-updates/hero-consulting-office.jpeg",
       alt: "Tư vấn chuyên nghiệp tài chính – taichinh.de",
     },
   },
@@ -75,7 +75,7 @@ export const heroSlides = [
     headline: "Xây dựng tài sản vàng cho tương lai",
     cta: { label: "Khám phá quỹ & vàng", href: "/series/invest" } as CTA,
     image: {
-      src: "/images/article-09-vang-goldsparplan.jpeg",
+      src: "/images/client-updates/gold-geiger-bars.jpeg",
       alt: "Đầu tư vàng và quỹ Sparplan",
     },
   },
@@ -93,7 +93,7 @@ export const heroSlides = [
     headline: "Chuẩn bị tài chính cho bất động sản",
     cta: { label: "Tìm hiểu Bauspar", href: "/series/bauspar" } as CTA,
     image: {
-      src: "/images/article-04-bauspar.jpeg",
+      src: "/images/client-updates/bauspar-immostart-diagram.jpeg",
       alt: "Quỹ xây dựng Bauspar",
     },
   },
@@ -145,7 +145,7 @@ export const teaserCards: TeaserCard[] = [
     headline: "Hành trình tài chính 5 lĩnh vực",
     cta: { label: "Tìm hiểu", href: "/quan-ly-chuyen-nghiep-cho-tai-chinh-cua-ban" },
     image: {
-      src: "/images/article-03-tu-van-chuyen-nghiep.jpeg",
+      src: "/images/client-updates/hero-consulting-office.jpeg",
       alt: "Tư vấn tài chính chuyên nghiệp",
     },
   },
@@ -154,7 +154,7 @@ export const teaserCards: TeaserCard[] = [
     headline: "Quỹ đầu tư & Vàng",
     cta: { label: "Tìm hiểu", href: "/series/invest" },
     image: {
-      src: "/images/article-09-vang-goldsparplan.jpeg",
+      src: "/images/client-updates/gold-geiger-bars.jpeg",
       alt: "Đầu tư vàng và quỹ Fonds Sparplan",
     },
   },
@@ -172,7 +172,7 @@ export const teaserCards: TeaserCard[] = [
     headline: "Bauspar & Bất động sản",
     cta: { label: "Tìm hiểu", href: "/series/bauspar" },
     image: {
-      src: "/images/article-04-bauspar.jpeg",
+      src: "/images/client-updates/bauspar-immostart-diagram.jpeg",
       alt: "Quỹ xây dựng Bauspar",
     },
   },
@@ -239,13 +239,13 @@ export const articles: Article[] = [
     slug: "ke-hoach-cho-tuong-lai-con-yeu",
     title: "Kế hoạch Tài chính cho tương lai con trẻ",
     date: "May 5, 2025",
-    image: "/images/article-01-tuong-lai-con-tre.jpeg",
+    image: "/images/client-updates/piggybank-icon.jpeg",
   },
   {
     slug: "tich-luy-tai-chinh-and-bao-hiem-ho-tro-fondspolice",
     title: "Tích lũy Tài chính & Kế hoạch an toàn",
     date: "May 4, 2025",
-    image: "/images/article-02-tich-luy-fondspolice.jpeg",
+    image: "/images/client-updates/fonds-monthly-to-fonds.jpeg",
   },
   {
     slug: "quan-ly-chuyen-nghiep-cho-tai-chinh-cua-ban",
@@ -253,127 +253,127 @@ export const articles: Article[] = [
     date: "May 6, 2025",
     excerpt:
       "Chào mừng bạn đến với trang web taichinh.de của chúng tôi. Trang taichinh.de cung cấp thông tin chính xác và cập nhật về các lĩnh vực ĐẦU TƯ – TIẾT KIỆM, BẢO HIỂM, QUỸ XÂY DỰNG, NGÂN HÀNG và NĂNG LƯỢNG (ga, điện) dành cho cộng đồng người Việt tại Đức.",
-    image: "/images/article-03-tu-van-chuyen-nghiep.jpeg",
+    image: "/images/client-updates/hero-consulting-office.jpeg",
   },
   {
     slug: "tiet-kiem-xay-dung",
     title: "Tiết kiệm xây dựng - Bauspar",
     date: "Mar 31, 2025",
-    image: "/images/article-04-bauspar.jpeg",
+    image: "/images/client-updates/bauspar-immostart-diagram.jpeg",
   },
   {
     slug: "dau-tu-vao-quy-fonds-sparsplan",
     title: "Tiết kiệm vào Quỹ đầu tư - Fonds Sparsplan",
     date: "Mar 31, 2025",
-    image: "/images/article-05-fonds-sparplan.jpeg",
+    image: "/images/client-updates/fonds-monthly-to-fonds.jpeg",
   },
   {
     slug: "bao-hiem-huu-tri-doanh-nghiep",
     title: "Bảo hiểm hưu trí doanh nghiệp",
     date: "Mar 30, 2025",
-    image: "/images/article-06-huu-tri-doanh-nghiep.jpeg",
+    image: "/images/client-updates/bav-benefits.jpeg",
   },
   {
     slug: "bao-hiem-huu-tri-riester",
     title: "Bảo hiểm hưu trí Riester - Rente",
     date: "Mar 30, 2025",
-    image: "/images/article-07-riester.png",
+    image: "/images/client-updates/piggybank-icon.jpeg",
   },
   {
     slug: "bao-hiem-doanh-nghiep",
-    title: "Bảo hiểm doanh nghiệp",
+    title: "Bảo hiểm Doanh nghiệp",
     date: "Mar 30, 2025",
-    image: "/images/article-08-bao-hiem-doanh-nghiep.jpeg",
+    image: "/images/client-updates/generali-logo.jpeg",
   },
   {
     slug: "dau-tu-vao-vang-gold",
     title: "Đầu tư vàng - Goldsparplan",
     date: "Mar 30, 2025",
-    image: "/images/article-09-vang-goldsparplan.jpeg",
+    image: "/images/client-updates/gold-geiger-bars.jpeg",
   },
   {
     slug: "tin-dung-bat-dong-san",
     title: "Tín dụng bất động sản - Immobilienfinanzierung",
     date: "Mar 30, 2025",
-    image: "/images/article-10-tin-dung-bat-dong-san.jpeg",
+    image: "/images/client-updates/immosmart-badge.jpeg",
   },
   {
     slug: "bao-hiem-huu-tri-co-ban",
     title: "Bảo hiểm hưu trí cơ bản - Basisrente",
     date: "Mar 30, 2025",
-    image: "/images/article-11-basisrente.jpeg",
+    image: "/images/client-updates/piggybank-icon.jpeg",
   },
   {
     slug: "he-thong-dien-mat-troi-solaranlage",
     title: "Máy bơm nhiệt & Năng lượng mặt trời",
     date: "Mar 28, 2025",
-    image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1746300912851/24486b5d-2935-405e-9bfe-cf5e2ce2253f.png",
+    image: "/images/client-updates/enpal-logo.jpeg",
   },
   {
     slug: "tin-dung-ca-nhan",
     title: "Tín dụng cá nhân - Privatkredit",
     date: "Mar 27, 2025",
-    image: "https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/t-UV1rZqPuY/upload/d07e66cb6b3c0d32d9eae01da8b8e138.jpeg",
+    image: "/images/client-updates/credit-consolidation-diagram.jpeg",
   },
   {
     slug: "bao-hiem-y-te",
     title: "Bảo hiểm Y tế",
     date: "Mar 26, 2025",
-    image: "https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/mwpFjE1Bi0M/upload/2dfd1feb580d1d1e86918ad507baca1f.jpeg",
+    image: "/images/client-updates/bkk-linde-logo.jpeg",
   },
   {
     slug: "fingerhaus",
     title: "Nhà ở tiền chế - FingerHaus",
     date: "Mar 24, 2025",
-    image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1745689028964/42780419-201b-4fc9-8a95-d68c846d2dcc.png",
+    image: "/images/client-updates/fingerhaus-awards.jpeg",
   },
   {
     slug: "bao-hiem-phap-ly",
     title: "Bảo hiểm pháp lý",
     date: "Mar 24, 2025",
-    image: "https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/6sl88x150Xs/upload/bc857f2f11022a78f9346b43d3641ceb.jpeg",
+    image: "/images/client-updates/advocard-360-private.jpeg",
   },
   {
     slug: "bao-hiem-cho-he-thong-dien-mat-troi",
     title: "Bảo hiểm cho hệ thống điện mặt trời",
     date: "Mar 23, 2025",
-    image: "https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/7razCd-RUGs/upload/aece376ac8c0f8ada2b3687c3220ba81.jpeg",
+    image: "/images/client-updates/solar-icon.jpeg",
   },
   {
     slug: "bao-hiem-trach-nhiem-ca-nhan",
     title: "Bảo hiểm trách nhiệm cá nhân",
     date: "Mar 23, 2025",
-    image: "https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/RVk8EwpRwNs/upload/2ef9619b745fc99882c2647030dc8bd0.jpeg",
+    image: "/images/client-updates/shield-person-icon.jpeg",
   },
   {
     slug: "bao-hiem-tai-san",
     title: "Bảo hiểm tài sản",
     date: "Mar 23, 2025",
-    image: "https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/3OiYMgDKJ6k/upload/b1fda52ce60144f7c0682faa979bf36e.jpeg",
+    image: "/images/client-updates/household-icon.jpeg",
   },
   {
     slug: "bao-hiem-nha-dat",
     title: "Bảo hiểm nhà đất",
     date: "Mar 23, 2025",
-    image: "https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/6Xdx42pvbAc/upload/0b05e8ea09c8369a897f1d4529c2abd8.jpeg",
+    image: "/images/client-updates/home-icon.jpeg",
   },
   {
     slug: "bao-hiem-kinh",
     title: "Bảo hiểm kính",
     date: "Mar 21, 2025",
-    image: "https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/5Uh-wTSz-q0/upload/a95f8ec9bc423391249e618700697e91.jpeg",
+    image: "/images/client-updates/glass-break-icon.jpeg",
   },
   {
     slug: "bao-hiem-tai-nan",
     title: "Bảo hiểm tai nạn",
     date: "Mar 21, 2025",
-    image: "https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/5_GRulmDNX0/upload/172546f6fa164dcd01873d83a21e98b8.jpeg",
+    image: "/images/client-updates/injury-icon.jpeg",
   },
   {
     slug: "nguon-dien-gas-re",
     title: "Nguồn Điện, Gas rẻ",
     date: "Feb 22, 2025",
-    image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1746302036868/f594abdb-8a64-4087-81b0-ec1a83d687fa.jpeg",
+    image: "/images/client-updates/signpost-icon.jpeg",
   },
 ];
 
@@ -381,7 +381,7 @@ export const articles: Article[] = [
  * Categories mirror the 3 top-level sections in the header navigation:
  * "Đầu tư – Tiết kiệm", "Bảo hiểm", "Quỹ xây dựng".
  */
-const SLUG_TO_CATEGORY: Record<string, string> = {
+export const SLUG_TO_CATEGORY: Record<string, string> = {
   "quan-ly-chuyen-nghiep-cho-tai-chinh-cua-ban": "Đầu tư – Tiết kiệm",
   "ke-hoach-cho-tuong-lai-con-yeu": "Đầu tư – Tiết kiệm",
   "tich-luy-tai-chinh-and-bao-hiem-ho-tro-fondspolice": "Đầu tư – Tiết kiệm",

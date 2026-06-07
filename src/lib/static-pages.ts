@@ -31,13 +31,6 @@ export const staticPages: Record<string, StaticPage> = {
       { type: "p", text: "**Chào mừng bạn đến với trang web taichinh.de của chúng tôi.**" },
       { type: "p", text: "Trang taichinh.de cung cấp thông tin chính xác và cập nhật về các lĩnh vực ĐẦU TƯ-TIẾT KIỆM, BẢO HIỂM, QUỸ XÂY DỰNG, NGÂN HÀNG và NĂNG LƯỢNG (ga, điện) dành cho cộng đồng người Việt tại Đức. Để tối ưu hóa các mục tiêu tài chính của bạn, hãy liên hệ với văn phòng tư vấn tài chính **Vũ Thế Bảo** để đặt lịch hẹn. Chúng tôi cam kết cung cấp cho bạn dịch vụ tư vấn chuyên nghiệp và tận tâm." },
       { type: "p", text: "**Rất hân hạnh!**" },
-      { type: "img", src: "https://cdn.hashnode.com/res/hashnode/image/upload/v1743325706552/304a54de-d943-454d-8be4-c8e86af1133a.png", alt: "Bao Vu The — Vermögensberater" },
-      { type: "h3", text: "Bao Vu The" },
-      { type: "p", text: "_Vermögensberater_" },
-      { type: "p", text: "**Địa chỉ:** Proskauer Str. 13, 10247 Berlin" },
-      { type: "p", text: "**Tel.:** +49 30-4268859" },
-      { type: "p", text: "**Mobil:** 0176-10178768 (WhatsApp / Zalo / Viber)" },
-      { type: "p", text: "**Email:** bao.vu-the.3625100@dvag.de" },
     ],
   },
 

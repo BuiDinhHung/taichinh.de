@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { CONTACT } from "@/lib/booking";
-import { FacebookIcon, MailIcon, PhoneIcon, WhatsAppIcon } from "@/components/icons";
+import { MailIcon, PhoneIcon, WhatsAppIcon } from "@/components/icons";
 
 export function QuickContact() {
   const items = [
@@ -22,16 +22,10 @@ export function QuickContact() {
       href: `mailto:${CONTACT.email}`,
       Icon: MailIcon,
     },
-    {
-      label: "Facebook",
-      value: "facebook.com/61575996313092",
-      href: "https://facebook.com/61575996313092/",
-      Icon: FacebookIcon,
-    },
   ];
 
   return (
-    <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+    <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
       {items.map(({ label, value, href, Icon }) => (
         <Link
           key={label}

@@ -7,6 +7,7 @@ import { TeaserSlider } from "@/components/TeaserSlider";
 import { RatingsSection } from "@/components/RatingsSection";
 import { KloppSection } from "@/components/KloppSection";
 import { ArticleSlider } from "@/components/ArticleSlider";
+import { AdvisorProfileSection } from "@/components/AdvisorProfileSection";
 import { Footer } from "@/components/Footer";
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
         <TeaserSlider />
         <RatingsSection />
         <KloppSection />
+        <AdvisorProfileSection />
         <ArticleSlider />
       </main>
       <Footer />

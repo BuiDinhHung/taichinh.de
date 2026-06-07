@@ -105,7 +105,7 @@ export function ArticleSlider() {
                   </p>
                 )}
                 <Link
-                  href={item.href}
+                  href="/archive"
                   className="mt-auto inline-flex items-center gap-2 self-start text-sm font-bold text-brand-gold-darker underline decoration-2 underline-offset-4 hover:no-underline dark:text-primary"
                 >
                   Đọc tiếp

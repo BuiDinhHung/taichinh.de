@@ -38,11 +38,10 @@ export const articleBodies: Record<string, Block[]> = {
     },
     { type: "h2", text: "Đối tác" },
     { type: "p", text: "Đối tác của chúng tôi là những công ty hàng đầu trong ngành tài chính. Vì vậy, bạn có thể yên tâm rằng mọi thứ bạn xây dựng với sự hỗ trợ của chúng tôi sẽ bền vững." },
-    { type: "img", src: "https://cdn.hashnode.com/res/hashnode/image/upload/v1744307702491/3dd23064-4134-4efb-bc0c-bb70e6b5a9e1.png", alt: "Đối tác tài chính" },
-    { type: "img", src: "https://cdn.hashnode.com/res/hashnode/image/upload/v1746288599663/5ece9a76-713f-4a33-b51c-21c75a02f411.png", alt: "Đối tác tài chính" },
+    { type: "img", src: "/images/client-updates/partner-bank-logos.jpeg", alt: "Đối tác tài chính" },
     { type: "p", text: "Trong danh mục sản phẩm đa dạng của mình, chúng tôi luôn sẵn sàng tư vấn để bạn lựa chọn những sản phẩm phù hợp nhất. Nhờ mối quan hệ hợp tác chặt chẽ với các đối tác, chúng tôi có thể mang đến cho bạn những sản phẩm chất lượng, độc đáo và đáp ứng được yêu cầu linh hoạt, tùy theo nhu cầu và hoàn cảnh riêng của bạn." },
     { type: "h2", text: "Bạn cần tư vấn? Hãy liên hệ với chúng tôi!" },
-    { type: "img", src: "https://cdn.hashnode.com/res/hashnode/image/upload/v1750498689341/93a49abc-43ec-46c6-a81d-5e704726bbc3.png", alt: "Liên hệ tư vấn" },
+    { type: "img", src: "/images/client-updates/hero-consulting-office.jpeg", alt: "Liên hệ tư vấn" },
   ],
 
   "ke-hoach-cho-tuong-lai-con-yeu": [
@@ -58,7 +57,7 @@ export const articleBodies: Record<string, Block[]> = {
       ],
     },
     { type: "p", text: "Với chương trình **Mein Zukunftsplan**, bạn có thể tích lũy tài chính an toàn, linh hoạt với khả năng đầu tư vàng — đồng thời được bảo vệ toàn diện trước rủi ro và có thể sử dụng giá trị tích lũy làm tài sản thế chấp." },
-    { type: "img", src: "https://cdn.hashnode.com/res/hashnode/image/upload/v1746486848823/0d27b0d8-8072-47bd-972e-c9511522ee6c.jpeg", alt: "Mein Zukunftsplan" },
+    { type: "img", src: "/images/client-updates/piggybank-icon.jpeg", alt: "Mein Zukunftsplan" },
     { type: "h2", text: "💡 Chỉ với một kế hoạch tài chính thông minh — mọi ước mơ đều trong tầm tay" },
     { type: "p", text: "Gói tiết kiệm bắt đầu chỉ từ **25,00 € mỗi tháng** từ trợ cấp trẻ em (Kindergeld)." },
     { type: "h3", text: "Tính linh hoạt" },
@@ -83,7 +82,7 @@ export const articleBodies: Record<string, Block[]> = {
         "Bảo hiểm rủi ro",
       ],
     },
-    { type: "img", src: "https://cdn.hashnode.com/res/hashnode/image/upload/v1747923629907/9386deab-ed18-4bd9-8e3f-de07fefbea0a.jpeg", alt: "Kế hoạch tài chính cho con" },
+    { type: "img", src: "/images/client-updates/growth-chart-icon.jpeg", alt: "Kế hoạch tài chính cho con" },
     { type: "callout", text: "📞 Bạn cần tư vấn? Hãy để lại thông tin liên hệ, chúng tôi sẽ hồi đáp trong thời gian sớm nhất." },
   ],
 
@@ -116,13 +115,14 @@ export const articleBodies: Record<string, Block[]> = {
         "Các rủi ro khác ảnh hưởng đến thu nhập và tài chính",
       ],
     },
-    { type: "img", src: "https://cdn.hashnode.com/res/hashnode/image/upload/v1746478804903/4adc2ca1-b683-4174-8f0f-157b77a2dac8.jpeg", alt: "Fondspolice — Tiết kiệm và bảo vệ" },
+    { type: "img", src: "/images/client-updates/fonds-monthly-to-fonds.jpeg", alt: "Fondspolice — Tiết kiệm và bảo vệ" },
     { type: "callout", text: "📞 Bạn cần tư vấn? Hãy để lại thông tin liên hệ, chúng tôi sẽ hồi đáp trong thời gian sớm nhất." },
   ],
 
   "tiet-kiem-xay-dung": [
     { type: "p", text: "Xây dựng nền tảng tài chính an toàn, linh hoạt và có thể dự định được thông qua **hợp đồng tiết kiệm xây dựng (Bausparvertrag)**. Bằng cách tiết kiệm cho việc mua nhà, bạn có thể chuẩn bị tài chính một cách hệ thống và cụ thể, tận dụng các khoản trợ cấp của chính phủ, đồng thời đảm bảo quyền vay vốn ưu đãi để xây dựng nhà ở." },
     { type: "h3", text: "A. ImmoStart — Sản phẩm hoàn hảo để chuẩn bị xây dựng, mua hoặc tái cấp vốn cho bất động sản nhà ở" },
+    { type: "img", src: "/images/client-updates/bauspar-immostart-diagram.jpeg", alt: "ImmoStart - chương trình tiết kiệm xây dựng" },
     { type: "p", text: "**Tất cả các lợi thế trong một sản phẩm:**" },
     {
       type: "ul",
@@ -169,6 +169,8 @@ export const articleBodies: Record<string, Block[]> = {
   "dau-tu-vao-quy-fonds-sparsplan": [
     { type: "h2", text: "Tiết kiệm tiền định kỳ vào các Quỹ đầu tư là một lựa chọn sáng suốt" },
     { type: "p", text: "Với các kế hoạch tiết kiệm, bạn có thể xây dựng một tài sản đáng kể. Chỉ từ **25 Euro mỗi tháng**. Bạn hoàn toàn linh hoạt — cả trong việc chọn quỹ, cũng như trong việc điều chỉnh số tiền tiết kiệm và thời gian thực hiện." },
+    { type: "img", src: "/images/client-updates/fonds-monthly-to-fonds.jpeg", alt: "Đầu tư định kỳ vào quỹ Fonds" },
+    { type: "img", src: "/images/client-updates/fonds-one-time-vs-savings.jpeg", alt: "So sánh đầu tư một lần và Fonds-Sparplan" },
     { type: "h2", text: "Các đối tác tài chính hàng đầu bên các bạn" },
     { type: "ul", items: ["DWS Investment Deutschland", "Allianz Global Investors"] },
     { type: "h2", text: "Các yếu tố thành công trong đầu tư" },
@@ -197,7 +199,7 @@ export const articleBodies: Record<string, Block[]> = {
     },
     { type: "p", text: "Đối với một GmbH và giám đốc điều hành, quyền lợi về thuế này cũng được hưởng." },
     { type: "h3", text: "Lợi ích cho bạn là người lao động" },
-    { type: "img", src: "https://cdn.hashnode.com/res/hashnode/image/upload/v1745521473866/a3db0487-a0fa-4fd2-a955-117fba92fe07.png", alt: "Lợi ích cho người lao động" },
+    { type: "img", src: "/images/client-updates/bav-benefits.jpeg", alt: "Lợi ích cho người lao động" },
     {
       type: "ul",
       items: [
@@ -212,7 +214,7 @@ export const articleBodies: Record<string, Block[]> = {
       ],
     },
     { type: "h3", text: "Lợi ích cho doanh nghiệp" },
-    { type: "img", src: "https://cdn.hashnode.com/res/hashnode/image/upload/v1745521622746/35e54be4-fffd-48be-a676-d4259889dcf3.png", alt: "Lợi ích cho doanh nghiệp" },
+    { type: "img", src: "/images/client-updates/bav-benefits.jpeg", alt: "Lợi ích cho doanh nghiệp" },
     {
       type: "ul",
       items: [
@@ -231,7 +233,7 @@ export const articleBodies: Record<string, Block[]> = {
     { type: "h2", text: "Bổ sung tài chính cho nghỉ hưu — được hỗ trợ của nhà nước" },
     { type: "p", text: "Chỉ có với **Riester-Rente**, bạn mới nhận được những khoản trợ cấp hàng năm từ nhà nước cao như vậy. Hãy tận dụng những cơ hội này — đầu tư vào tương lai của bạn!" },
     { type: "h2", text: "Lợi ích của bạn từ Riester-Rente" },
-    { type: "img", src: "https://cdn.hashnode.com/res/hashnode/image/upload/v1745522131658/998437a5-00e7-4d6f-ab1f-efdcc1f4a39c.png", alt: "Lợi ích Riester-Rente" },
+    { type: "img", src: "/images/client-updates/piggybank-icon.jpeg", alt: "Lợi ích Riester-Rente" },
     { type: "h2", text: "Với những đồng vốn nhỏ, đạt được hiệu quả lớn lao" },
     { type: "h3", text: "Ai đủ điều kiện nhận hỗ trợ từ nhà nước?" },
     { type: "p", text: "Tất cả những người lao động đóng bảo hiểm hưu trí nhà nước đều có thể nhận được hỗ trợ này." },
@@ -262,6 +264,7 @@ export const articleBodies: Record<string, Block[]> = {
 
   "bao-hiem-doanh-nghiep": [
     { type: "h2", text: "Doanh nghiệp của bạn được bảo vệ toàn diện trong gói bảo hiểm tổng hợp" },
+    { type: "img", src: "/images/client-updates/generali-logo.jpeg", alt: "Generali" },
     { type: "p", text: "**Điểm nổi bật của khái niệm FirmenSAFE:**" },
     {
       type: "ul",
@@ -354,7 +357,7 @@ export const articleBodies: Record<string, Block[]> = {
 
   "dau-tu-vao-vang-gold": [
     { type: "h2", text: "Giá trị tăng trưởng của vàng trong 5 năm qua" },
-    { type: "img", src: "https://cdn.hashnode.com/res/hashnode/image/upload/v1746303162282/381d3d4b-9485-4dde-8b99-9cbab26f1a3c.png", alt: "Giá trị vàng" },
+    { type: "img", src: "/images/client-updates/euro-growth-icon.jpeg", alt: "Giá trị vàng" },
     { type: "h2", text: "Kế hoạch tiết kiệm vàng — một ý tưởng sáng giá cho tương lai của bạn" },
     { type: "p", text: "Chỉ từ **25 Euro**, bạn cũng có thể trở thành chủ sở hữu vàng thật. Với kế hoạch tiết kiệm vàng Geiger, bạn sẽ mua vàng nguyên chất vật lý ngay từ đồng Euro đầu tiên. Số tiền tiết kiệm sẽ được tích lũy vào một thỏi vàng 50 gram với chất lượng cao nhất. Các điều kiện mong muốn sẽ do bạn tự quyết định." },
     { type: "h3", text: "Tại sao nên đầu tư vào vàng với kế hoạch tiết kiệm vàng Geiger?" },
@@ -362,7 +365,7 @@ export const articleBodies: Record<string, Block[]> = {
     { type: "p", text: "🔄 **Linh hoạt — Phù hợp với mọi kế hoạch tài chính** — Bạn có thể bắt đầu tiết kiệm vàng chỉ từ 25 Euro mỗi tháng hoặc chọn hình thức thanh toán một lần từ 250 Euro trở lên. Kế hoạch tiết kiệm được thiết kế cá nhân hóa theo nhu cầu và mục tiêu của bạn — bạn quyết định mức đóng góp và thời gian." },
     { type: "p", text: "💰 **Ưu đãi thuế — Tối ưu hóa lợi nhuận** — Lợi nhuận từ việc bán vàng vật chất sẽ được miễn thuế thu nhập nếu bạn nắm giữ trong ít nhất 12 tháng. Đây là một ưu điểm nổi bật so với nhiều hình thức đầu tư khác." },
     { type: "h2", text: "Chất lượng hàng đầu — An tâm tuyệt đối" },
-    { type: "img", src: "https://cdn.hashnode.com/res/hashnode/image/upload/v1746706203536/4588ccdc-b66b-43c0-81dc-e71f7771e9f4.png", alt: "Chất lượng vàng" },
+    { type: "img", src: "/images/client-updates/gold-geiger-bars.jpeg", alt: "Chất lượng vàng" },
     { type: "h2", text: "Đầu tư vàng như thế nào?" },
     { type: "h3", text: "1. Mua vàng trực tiếp" },
     {
@@ -382,7 +385,7 @@ export const articleBodies: Record<string, Block[]> = {
       ],
     },
     { type: "h2", text: "Geiger Edelmetalle — vàng thật, bảo mật thật, an tâm thật" },
-    { type: "img", src: "https://cdn.hashnode.com/res/hashnode/image/upload/v1746737683618/fa760261-dbfa-4cd5-99be-0dfc83126f59.png", alt: "Geiger Edelmetalle" },
+    { type: "img", src: "/images/client-updates/gold-geiger-bars.jpeg", alt: "Geiger Edelmetalle" },
     { type: "p", text: "Các đặc điểm bảo mật đặc biệt đã được phát triển nhằm bảo vệ thỏi vàng tối đa khỏi nguy cơ bị làm giả. Mỗi chi tiết đều được thiết kế cẩn trọng để đảm bảo tính xác thực và độ tin cậy cao nhất:" },
     {
       type: "ol",
@@ -415,12 +418,12 @@ export const articleBodies: Record<string, Block[]> = {
     { type: "p", text: "Cung cấp giải pháp cố định hoặc ổn định lãi suất trong nhiều năm, giúp kiểm soát chi phí vốn." },
     { type: "h2", text: "Sự khác biệt không chỉ nằm ở giải pháp — mà ở sự thấu hiểu" },
     { type: "p", text: "\"Chúng tôi lắng nghe — hiểu rõ nhu cầu, kỳ vọng và phong cách của từng khách hàng để tạo ra hành trình tài chính đúng chất 'độc bản'.\"" },
-    { type: "img", src: "https://cdn.hashnode.com/res/hashnode/image/upload/v1743335634027/a8f7ac08-b4ff-484c-a1c1-73e2937698bc.png", alt: "Tín dụng bất động sản" },
+    { type: "img", src: "/images/client-updates/immosmart-badge.jpeg", alt: "Tín dụng bất động sản" },
   ],
 
   "bao-hiem-huu-tri-co-ban": [
     { type: "h3", text: "Chủ động tài chính cho nghỉ hưu — được hỗ trợ bởi nhà nước" },
-    { type: "img", src: "https://cdn.hashnode.com/res/hashnode/image/upload/v1743336320754/2097f64e-8864-41e1-a452-7de05bb41534.png", alt: "Basisrente" },
+    { type: "img", src: "/images/client-updates/piggybank-icon.jpeg", alt: "Basisrente" },
     { type: "h3", text: "Lương hưu cơ bản là gì?" },
     {
       type: "ul",
@@ -450,6 +453,7 @@ export const articleBodies: Record<string, Block[]> = {
 
   "he-thong-dien-mat-troi-solaranlage": [
     { type: "h2", text: "🌱 Giải pháp Năng lượng Xanh tại Đức cùng Enpal: Kết hợp Máy bơm nhiệt & Năng lượng mặt trời" },
+    { type: "img", src: "/images/client-updates/enpal-logo.jpeg", alt: "Enpal" },
     { type: "h3", text: "Năng lượng sạch – Tiết kiệm dài lâu – Hỗ trợ tối đa từ nhà nước" },
     { type: "p", text: "Trong bối cảnh giá năng lượng ngày càng tăng và yêu cầu cắt giảm khí thải CO₂ trở nên cấp thiết, người dân tại Đức đang tìm đến các giải pháp năng lượng bền vững. Sự kết hợp giữa **máy bơm nhiệt (Wärmepumpen)** và **hệ thống điện mặt trời (Solaranlagen)** chính là lựa chọn tối ưu cho ngôi nhà của bạn." },
     { type: "h3", text: "🔋 Tại sao nên kết hợp Wärmepumpe & Solaranlage?" },
@@ -485,7 +489,7 @@ export const articleBodies: Record<string, Block[]> = {
   "tin-dung-ca-nhan": [
     { type: "h3", text: "Tín dụng Cá nhân – Đồng hành cùng những thay đổi trong cuộc sống" },
     { type: "p", text: "Cuộc sống không ngừng biến động – đôi khi những thay đổi ấy đòi hỏi nguồn tài chính ngoài kế hoạch. Chiếc xe bắt đầu hỏng hóc, bạn chuẩn bị chuyển nhà, con bạn cần một không gian riêng, hoặc bạn đang lên kế hoạch nâng cao trình độ học vấn. Không phải lúc nào bạn cũng có sẵn ngân sách để ứng phó." },
-    { type: "img", src: "https://cdn.hashnode.com/res/hashnode/image/upload/v1745687799316/242482fb-2cd3-4155-9213-1fa5e2c2644c.png", alt: "Tín dụng cá nhân" },
+    { type: "img", src: "/images/client-updates/credit-consolidation-diagram.jpeg", alt: "Tín dụng cá nhân" },
     { type: "h3", text: "Privatkredit Smart - Đáp ứng nhu cầu của bạn" },
     { type: "p", text: "Bạn mong muốn có thêm không gian tài chính để thực hiện những khoản chi tiêu quan trọng? Việc lập kế hoạch tài chính có trách nhiệm sẽ giúp bạn kiểm soát tốt hơn tương lai của mình. **Khoản vay cá nhân Smart từ Deutsche Bank** là một phần trong giải pháp tư vấn tài chính toàn diện, hỗ trợ bạn hiện thực hóa các mục tiêu của mình." },
     { type: "p", text: "Để gia tăng sự an tâm, bạn có thể lựa chọn gói **bảo hiểm bổ sung**, giúp bảo vệ thu nhập và hỗ trợ tài chính cho gia đình bạn trong những tình huống không lường trước." },
@@ -496,6 +500,7 @@ export const articleBodies: Record<string, Block[]> = {
 
   "bao-hiem-y-te": [
     { type: "p", text: "Chúng tôi cung cấp cho bạn **Bảo hiểm Y tế Tư** (_Private Krankenversicherung_) và **Bảo hiểm Y tế Công** (_Gesetzliche Krankenversicherung_) với những quyền lợi chăm sóc y tế tốt nhất với mức chi trả hợp lý. Ngoài ra bạn có thể lựa chọn thêm các bảo hiểm bổ sung như Bảo hiểm răng, Bảo hiểm chăm sóc và Bảo hiểm y tế du lịch." },
+    { type: "img", src: "/images/client-updates/bkk-linde-logo.jpeg", alt: "BKK Linde" },
     { type: "h2", text: "1. Bảo hiểm Y tế tư nhân" },
     { type: "p", text: "**Dịch vụ chăm sóc sức khỏe hàng đầu** — Bạn nhận được dịch vụ chăm sóc sức khỏe toàn diện, phù hợp với mong muốn và nhu cầu cá nhân của bạn. Tùy theo giai đoạn cuộc sống, tình trạng gia đình hoặc nghề nghiệp, bạn sẽ có những yêu cầu khác nhau đối với bảo hiểm y tế. Chúng tôi giúp bạn tìm ra giải pháp bảo vệ sức khỏe phù hợp nhất với bạn." },
     { type: "h3", text: "👉 GesundPro 1/2/3/P: Gói Bảo hiểm tối đa với quyền lợi vượt trội" },
@@ -633,6 +638,7 @@ export const articleBodies: Record<string, Block[]> = {
 
   "fingerhaus": [
     { type: "p", text: "**FingerHaus** là một trong những nhà sản xuất nhà tiền chế (Fertighaus) hàng đầu tại Đức, với hơn 75 năm kinh nghiệm trong lĩnh vực xây dựng nhà ở chất lượng cao. Là đối tác chiến lược của Deutsche Vermögensberatung, FingerHaus mang đến giải pháp xây nhà toàn diện — từ thiết kế cá nhân hóa đến bàn giao chìa khóa trao tay." },
+    { type: "img", src: "/images/client-updates/fingerhaus-awards.jpeg", alt: "FingerHaus" },
     { type: "h3", text: "Vì sao nên chọn FingerHaus?" },
     {
       type: "ul",
@@ -662,6 +668,7 @@ export const articleBodies: Record<string, Block[]> = {
 
   "bao-hiem-phap-ly": [
     { type: "p", text: "**Rechtsschutzversicherung**" },
+    { type: "img", src: "/images/client-updates/advocard-360-private.jpeg", alt: "ADVOCARD 360 Privat" },
     { type: "p", text: "Hỗ trợ pháp lý tối đa trên một thẻ. Các tranh chấp pháp lý có thể xảy ra ở bất kỳ đâu – dù là khi tham gia giao thông, trong công việc, với tư cách là người thuê/sở hữu, trong cuộc sống hàng ngày hoặc trên internet. **ADVOCARD-360°-PRIVAT** cung cấp sự bảo vệ toàn diện cho tất cả các lĩnh vực trong cuộc sống – cả offline lẫn online!" },
     {
       type: "ul",
@@ -680,6 +687,7 @@ export const articleBodies: Record<string, Block[]> = {
 
   "bao-hiem-cho-he-thong-dien-mat-troi": [
     { type: "h3", text: "Danh mục những thành phần trong hệ thống Điện mặt trời của bạn được bảo hiểm trong sản phẩm **Photovoltaik PLUS:**" },
+    { type: "img", src: "/images/client-updates/solar-icon.jpeg", alt: "Bảo hiểm điện mặt trời" },
     {
       type: "ul",
       items: [
@@ -698,6 +706,7 @@ export const articleBodies: Record<string, Block[]> = {
 
   "bao-hiem-trach-nhiem-ca-nhan": [
     { type: "p", text: "**Privathaftpflichtversicherung**" },
+    { type: "img", src: "/images/client-updates/shield-person-icon.jpeg", alt: "Bảo hiểm trách nhiệm cá nhân" },
     { type: "h2", text: "Các thành phần của chính sách bảo hiểm tài sản" },
     { type: "h3", text: "Bảo vệ nếu bạn gây thiệt hại cho người khác" },
     { type: "p", text: "Tai nạn có thể xảy ra nhanh chóng, có thể dẫn đến hậu quả nghiêm trọng:" },
@@ -733,6 +742,7 @@ export const articleBodies: Record<string, Block[]> = {
 
   "bao-hiem-tai-san": [
     { type: "h2", text: "Bảo vệ vô hạn cho tài sản của bạn" },
+    { type: "img", src: "/images/client-updates/household-icon.jpeg", alt: "Bảo hiểm tài sản" },
     { type: "p", text: "Điều gì sẽ xảy ra nếu bạn mất tất cả vì một vụ hỏa hoạn hoặc trộm cắp? Bảo hiểm tài sản gia đình của Generali sẽ bảo vệ bạn khỏi những mối nguy hiểm như vậy và những nguy cơ khác – và điều này được thực hiện với mức bảo vệ vô hạn, thường xuyên" },
     {
       type: "ul",
@@ -767,6 +777,7 @@ export const articleBodies: Record<string, Block[]> = {
 
   "bao-hiem-nha-dat": [
     { type: "p", text: "**Bảo vệ cho ngôi nhà của bạn**" },
+    { type: "img", src: "/images/client-updates/home-icon.jpeg", alt: "Bảo hiểm nhà đất" },
     { type: "p", text: "Nhiều người đầu tư tất cả thành quả của cả cuộc đời làm việc để thực hiện ước mơ sở hữu ngôi nhà riêng. Vì vậy, ngôi nhà thường là tài sản quý giá nhất. Một vụ hỏa hoạn có thể phá hủy hoàn toàn tài sản này. Đó là lý do bạn nên bảo vệ tài sản nhà ở của mình một cách vô hạn thông qua bảo hiểm nhà ở của Generali." },
     {
       type: "ul",
@@ -787,6 +798,7 @@ export const articleBodies: Record<string, Block[]> = {
 
   "bao-hiem-kinh": [
     { type: "p", text: "**Glasbruch**" },
+    { type: "img", src: "/images/client-updates/glass-break-icon.jpeg", alt: "Bảo hiểm kính" },
     { type: "h3", text: "Vỡ kính – an tâm tuyệt đối" },
     { type: "p", text: "Bảo hiểm kính hộ gia đình là một sự bổ sung hợp lý cho bảo hiểm tài sản gia đình. Một chiếc điện thoại đắt tiền có thể dễ dàng rơi xuống và màn hình bị vỡ. Trong gia đình, một tấm kính có thể bị vỡ hoặc bếp nấu ăn bằng kính gốm bị hư hỏng. Việc thay thế (bao gồm cả việc lắp kính tạm thời và lắp đặt) có thể rất tốn kém. Bảo hiểm kính hộ gia đình của Generali giúp bảo vệ bạn khỏi rủi ro tài chính này." },
     {
@@ -805,6 +817,7 @@ export const articleBodies: Record<string, Block[]> = {
 
   "bao-hiem-tai-nan": [
     { type: "p", text: "**Unfallversicherung**" },
+    { type: "img", src: "/images/client-updates/injury-icon.jpeg", alt: "Bảo hiểm tai nạn" },
     { type: "h2", text: "Bảo vệ trước hậu quả tài chính của một tai nạn" },
     { type: "p", text: "Có hàng ngàn loại tai nạn và sự cố có thể xảy ra trong cuộc sống hàng ngày." },
     { type: "p", text: "Tại Đức, mỗi năm có gần chín triệu tai nạn xảy ra, phần lớn trong số đó xảy ra tại nhà hoặc trong thời gian giải trí. Bảo hiểm tai nạn của Generali sẽ bảo vệ bạn trước các hậu quả tài chính của một tai nạn. Các quyền lợi bao gồm:" },
@@ -827,7 +840,7 @@ export const articleBodies: Record<string, Block[]> = {
     { type: "h2", text: "Chuyển đổi nhà cung cấp để tiết kiệm" },
     { type: "h3", text: "Giảm chi phí năng lượng của bạn ngay hôm nay" },
     { type: "p", text: "Bằng cách đổi nhà cung cấp điện và gas, bạn có thể tiết kiệm được hàng trăm euro mỗi năm cho điện sinh hoạt gia đình và hàng ngàn euro cho doanh nghiệp." },
-    { type: "img", src: "https://cdn.hashnode.com/res/hashnode/image/upload/v1745523895954/70f1f1f3-c4a1-4085-832a-2d3b9ec905f3.png", alt: "Nguồn điện gas rẻ" },
+    { type: "img", src: "/images/client-updates/signpost-icon.jpeg", alt: "Nguồn điện gas rẻ" },
     { type: "callout", text: "📞 Bạn cần tư vấn? Hãy liên hệ nhé!" },
   ],
 };
